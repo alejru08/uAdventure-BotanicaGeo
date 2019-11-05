@@ -43,23 +43,5 @@
     <default-initial-position x="400" y="450" />
   </scene>
   <map-scene id="El retiro" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4094850584452 -3.6929994821555 0.00344734297110705 0.00437736511231401" center="(40.4106124080434, -3.69031727314061)" zoom="16" start="no" />
-  <geoelement id="GeoElement">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Point>
-          <pos>
-          </pos>
-        </Point>
-      </geometry>
-    </geometries>
-    <actions />
-  </geoelement>
+
 </eAdventure>
