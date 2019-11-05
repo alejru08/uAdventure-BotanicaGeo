@@ -102,7 +102,7 @@ namespace uAdventure.Geo
                                 {
                                     var geoElement = new GeoElement(id);
                                     var place = extra[0] as SearchData;
-                                    if (place != null)
+                                    if (place != null && place.boundingBox != null)
                                     {
                                         geoElement.Geometries[0].Type = GMLGeometry.GeometryType.Polygon;
                                         geoElement.Geometries[0].Points = place.boundingBox.ToPoints().Select(p => new Vector2d(p.y, p.x)).ToArray();

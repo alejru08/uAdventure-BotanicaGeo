@@ -150,6 +150,18 @@ namespace uAdventure.Geo
         private SearchData[] DataProcessingOSM(string success)
         {
             JSONObject obj = new JSONObject(success);
+            if (obj == null || obj.list == null)
+            {
+                return new[] 
+                {
+                    new SearchData
+                    {
+                        coordinates = Vector2.zero,
+                        boundingBox = new RectD(new Vector2d(0,0), new Vector2d(0.01,0.01))
+                    }
+                };
+            }
+
             var dataCache = new List<SearchData>();
 
             foreach (JSONObject jsonObject in obj.list)
