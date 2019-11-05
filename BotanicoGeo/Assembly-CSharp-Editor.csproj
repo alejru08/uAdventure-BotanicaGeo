@@ -484,7 +484,7 @@
      <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\config_editor.xml" />
      <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\create-release.xml" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -688,37 +688,37 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Microsoft.Msagl">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/Microsoft.Msagl.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/Microsoft.Msagl.dll</HintPath>
  </Reference>
  <Reference Include="MoreLinq">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/MoreLinq.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/MoreLinq.dll</HintPath>
  </Reference>
  <Reference Include="NetLegacySupport.Tuple">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/NetLegacySupport.Tuple.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/NetLegacySupport.Tuple.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Threading.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Threading.dll</HintPath>
  </Reference>
  <Reference Include="System.Windows.Forms">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Windows.Forms.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Windows.Forms.dll</HintPath>
  </Reference>
  <Reference Include="LibTess">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
  </Reference>
  <Reference Include="UniRxUniversal">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
  </Reference>
  <Reference Include="Triangulation">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Editor/Plugins/System.Drawing.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Editor/Plugins/System.Drawing.dll</HintPath>
  </Reference>
  <Reference Include="zxing.unity">
- <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure-BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
