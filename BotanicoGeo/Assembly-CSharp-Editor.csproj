@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{C88AD87A-305A-9AC5-E514-A74B595F7790}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_33;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\uAdventure\Editor\AbstractEditorComponent.cs" />
+     <Compile Include="Assets\uAdventure\Editor\AbstractEditorComponentWithPreview.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ActionsList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\AnimationField.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Assets\CursorPostProcessor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Assets\EditorPostProcessor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Assets\ReadWritePostProcessor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Assets\SpritePostProcessor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Assets\VideoPostProcessor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\BuildingUtil\FileId.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ButtonList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ColumnList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ComponentBasedEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ComponentBasedEditorWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\ConversationEditorWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\NodeEditors\ConversationNodeEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\NodeEditors\ConversationNodeEditorFactory.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\NodeEditors\NodeEditors\DialogNodeEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\NodeEditors\NodeEditors\OptionNodeEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ConversationEditor\Utils\NodePositioner.cs" />
+     <Compile Include="Assets\uAdventure\Editor\DataControlList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\DescriptionsEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\BaseAreaEditablePopup.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\BaseChooseObjectPopup.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\BaseCreatorPopup.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\BaseInputPopup.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\Books\BooksAppearanceEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\Chapter\ChapterVarAndFlagsEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\ConfirmationDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\Cutscenes\CutsceneNameInputPopup.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\Cutscenes\CutsceneSlidesEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\DialogReceiverInterface.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\AnimationCharacterFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\AnimationFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\BaseFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\ImageFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\MusicFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\PathFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Dialogs\FileChooser\VideoFileOpenDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EditorComponent.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EditorComponentAttribute.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditor\ConditionEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditor\ConditionEditorFactory.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditor\ConditionEditors\FlagConditionEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditor\ConditionEditors\GlobalStatesRefEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditor\ConditionEditors\VarConditionEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\ConditionEditorWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\EffectEditorFactory.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\IEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\AbstractItemEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\ActivateEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\CancelActionEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\ConsumeObjectEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\DeactivateEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\DecrementVarEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\GenerateObjectEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\HighlightItemEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\IncrementVarEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\Inventory\AddObjectToInventoryEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\Inventory\RemoveObjectFromInventoryEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\MacroReferenceEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\MovementControl\ChangeOrientationEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\MoveNPCEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\MoveObjectEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\MovePlayerEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\PlayAnimationEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\PlaySoundEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\RandomEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\SceneElements\RemoveElementEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\SetValueEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\ShowTextEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\SpeakCharEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\SpeakPlayerEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\TriggerBookEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\TriggerConversationEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\TriggerCutsceneEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\TriggerLastSceneEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\TriggerSceneEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditor\NodeEditors\WaitTimeEffectEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\EffectEditor\EffectEditorWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\AdventureDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\AssetsController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Build\AndroidBuilder.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Build\IOSBuilder.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Build\ISimplifiedBuilder.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Build\StandaloneBuilder.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Build\WebGLBuilder.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\ChapterToolManager.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\ConditionsController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Config\ConfigData.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Config\ProjectConfigData.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Config\ProjectConfigDataConsumer.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Config\RecentFile.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Controller.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Adaptation\AdaptationProfileDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Adaptation\AdaptationProfilesDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Adaptation\AdaptationRuleDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Atrezzo\AtrezzoDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Atrezzo\AtrezzoListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Book\BookDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Book\BookPagesListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Book\BookParagraphDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Book\BookParagraphsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Book\BooksListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Character\NPCDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Character\NPCsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Character\PlayerDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\ConversationDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\ConversationLineDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\ConversationNodeDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\ConversationsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\DialogNodeDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\GraphConversationDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Conversation\OptionNodeDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Cutscene\CutsceneDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Cutscene\CutscenesListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Cutscene\EndSceneDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ActionDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ActionsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\AdvancedFeaturesDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ChapterDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ChapterListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\CustomActionDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\DataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\DataControlWithResources.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\General\ResourcesDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Global state\GlobalStateDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Global state\GlobalStateListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\IElementReference.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Item\ItemDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Item\ItemsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\IxAPIConfigurable.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Macro\MacroDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Macro\MacroListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ActiveAreaDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ActiveAreasListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\BarrierDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\BarriersListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ElementContainer.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ElementReferenceDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ExitDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ExitsListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\InfluenceAreaDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\NodeDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\PointDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\RectangleArea.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ReferencesListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\SceneDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\ScenesListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\SideDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Scene\TrajectoryDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Timer\TimerDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Data controllers\Timer\TimersListDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\DescriptionController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\DescriptionsController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\EffectsController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\ExitLookDataControl.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Searchable.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\SingleEffectController.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\ToolManager.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\AddBookPageTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\ChangeBookPageMarginsTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\ChangeBookPageScrollableTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\ChangeBookPageTypeTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\ChangeBookPageUriTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\ChangeParagraphContentTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\DeleteBookPageTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\MoveBookPageDownTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Book\MoveBookPageUpTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Conversation\OptionsPositionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Conversation\SelectLineAudioPathTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Area editon\AddNewPointTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Area editon\ChangePointValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Area editon\ChangeRectangularValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Area editon\DeletePointTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\AddResourcesBlockTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteArrowTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteAssetReferencesInResources.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteButtonTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteCursorTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteResourcesBlockTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DeleteResourceTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\DuplicateResourcesBlockTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\EditResourceTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\ResourcesTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\SelectArrowTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\SelectButtonTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\SelectCursorPathTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\SelectExitCursorPathTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Assets\SelectResourceTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangeElementReferenceTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangeForcePlayerInSceneTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangeNSDestinyPositionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangePlayerScaleTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangePositionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\ChangeRectangleValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Chapters\AddChapterTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Chapters\DeleteChapterTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeDescriptionSoundTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeDescriptionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeDetailedDescriptionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeDocumentationTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeIdTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeNameTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeSimpleSoundTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeTargetIdTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\ChangeTitleTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\DeleteDescriptionSoundTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\DeleteSimpleSoundTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Common text\SelectSimpleSoundTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Conditions\AddConditionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Conditions\ClearConditionsTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Description\AddDescriptionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Description\DuplicateDescriptionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Description\RemoveDescriptionTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Effects\AddEffectTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Effects\DeleteEffectTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Effects\MoveEffectInTableTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Effects\ReplaceEffectTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Generic\ChangeBooleanValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Generic\ChangeIntegerValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Generic\ChangeLongValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Generic\ChangeStringValueTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\Generic\MoveObjectTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\General\InvalidExitCursorTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\AddTrajectoryNodeTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\AddTrajectorySideTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\DeleteTrajectoryNodeTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\DeleteTrajectorySideTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\SetNodeValuesTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\SetSideLengthTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Scene\SetTrajectoryInitialNodeTool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Controllers\Tools\Tool.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\GameResources.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ActionsDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\AdaptationDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\AssessmentDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\AtrezzoDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\BookDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ChapterDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\CharacterDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ConditionsDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ConversationDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\CutsceneDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\DescriptionDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\DescriptorDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\DOMWriterAttribute.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\DOMWriterUtility.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\Effects\RemoveElementEffectWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\EffectsDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ExpectedGameIODOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\IDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ItemDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ParametrizedDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\PlayerDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\ResourcesDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\SceneDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\TimerDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\DOM writers\TrajectoryDOMWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\Writer\AnimationWriter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Engine logic\Writer\Writer\Writer.cs" />
+     <Compile Include="Assets\uAdventure\Editor\FileChooser.cs" />
+     <Compile Include="Assets\uAdventure\Editor\FileInfoExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\GraphEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\HandleUtil.cs" />
+     <Compile Include="Assets\uAdventure\Editor\InputDialog.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Data model\MenuInterfaces.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Data model\WindowMenuContainer.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Data model\WindowMenuItem.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\AboutMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\AdventureMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\ChaptersMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\ConfigurationMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\EditMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\FileMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\MenuItems\MenuItems.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Menu\Menu type\RunMenu.cs" />
+     <Compile Include="Assets\uAdventure\Editor\PreviewLayoutWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ResourcesEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ResourcesList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\SceneEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\SceneEditorWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\ScrollableList.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Tests\AdventureCreationTests.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Tests\JSONSerializationTests.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Tests\MatrixTests.cs" />
+     <Compile Include="Assets\uAdventure\Editor\TextWithSoundField.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Util\Converter.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Util\TextureUtil.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\AdventureWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\BuildWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Data model\BaseWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Data model\LayoutWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\EditorWindowBase.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\RectangleComponentEditor.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\WelcomeWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Adaptation Profile\AdaptationProfileWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Advanced features\AdvancedFeaturesWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Advanced features\AdvancedFeaturesWindowGlobalStates.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Advanced features\AdvancedFeaturesWindowListOfTimers.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Advanced features\AdvancedFeaturesWindowMacros.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Books\BooksWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Books\BooksWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Books\BooksWindowContents.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Books\BooksWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Books\IUnclippedDrawReceiver.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\ButtonMenuEditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Chapter\ChapterWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Characters\CharactersWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Characters\CharactersWindowActions.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Characters\CharactersWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Characters\CharactersWindowDialogConfiguration.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Characters\CharactersWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Conversation\ConversationWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Cutscenes\CutscenesWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Cutscenes\CutscenesWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Cutscenes\CutscenesWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Cutscenes\CutscenesWindowEndConfiguration.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\DataControlListEditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\DefaultButtonMenuEditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\EditorWindowBaseExtensionFactory.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\EditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\EditorWindowExtensionAttribute.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Items\ItemsWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Items\ItemsWindowActions.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Items\ItemsWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Items\ItemsWindowDescription.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Player\PlayerWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Player\PlayerWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\PreviewDataControlExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\ReorderableListEditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowActiveAreas.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowBarriers.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowElementReference.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowExits.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Scenes\ScenesWindowPlayerMovement.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Set items\SetItemsWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Set items\SetItemsWindowApperance.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\Set items\SetItemsWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Editor window\TabsEditorWindowExtension.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Welcome window\NewGameWindow.cs" />
+     <Compile Include="Assets\uAdventure\Editor\Windows\Windows types\Welcome window\OpenGameWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\AnalyticsController.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\DataControl\CompletableDataControl.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\DataControl\CompletableListDataControl.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\DataControl\TrackerConfigDataControl.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Window\AnalyticsWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Window\CompletablesWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Window\MilestoneEditorWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Window\ProgressEditorWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Window\TrackerConfigWindow.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Writer\CompletableDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureAnalytics\Editor\Writer\TrackerConfigDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\ExtElementRefDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GameplayAreaDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GeoActionDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GeoController.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GeoElementDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GeoElementRefDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\GMLGeometryDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\MapElementDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DataControls\MapSceneDataControl.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\DrawerParametersWindow.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GeoElementWindowActions.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GeoElementWindowDescription.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GeoElementWindowGeometry.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagerFactory.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagers\AbstractGUIMapPositionManager.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagers\GeolocationGuiMapPositionManager.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagers\RadialGuiMapPositionManager.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagers\ScreenGuiMapPositionManager.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\GUIMapPositionManagerUtility.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElement\IGUIMapPositionManager.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\GeoElementWindow.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapEditor.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapEditorWindow.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapScene\MapSceneWindowAppearance.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapScene\MapSceneWindowDocumentation.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapScene\MapSceneWindowReferences.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\MapSceneWindow.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\TileManager\ITileStorer.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\TileManager\TileStorage.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\TileManager\TileStorers\PngTextureStorer.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\AreaMeta.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\DropDown.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\MapWindow.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\PlaceSearcher.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\ProgressController.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\RadialSlider.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Util\TileUtil.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\Effects\NavigateEffectDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\Effects\NavigationControlEffectDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\Effects\TriggerZonedSceneEffectDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\GeoActionWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\GeoElementWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\Editor\Writers\MapSceneDOMWriter.cs" />
+     <Compile Include="Assets\uAdventureGeo\MapzenGo\Helpers\Search\Editor\SearchPlaceEditor.cs" />
+     <Compile Include="Assets\uAdventureGeo\MapzenGo\Models\Settings\Editor\HelperExtention.cs" />
+     <Compile Include="Assets\uAdventureGeo\MapzenGo\Models\Settings\Editor\LayerSettingWindows.cs" />
+     <Compile Include="Assets\uAdventureGeo\Model\Effects\Editor\NavigateEffectEditor.cs" />
+     <Compile Include="Assets\uAdventureGeo\Model\Effects\Editor\NavigationControlEffectEditor.cs" />
+     <Compile Include="Assets\uAdventureGeo\Model\Effects\Editor\TriggerZonedSceneEffectEditor.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\DataControl\QRCodeDataControl.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRCodeEditorWindow.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRCodesWindow.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRCodeWriter.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRController.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRScannerEffectEditor.cs" />
+     <Compile Include="Assets\uAdventureQR\Editor\QRScannerEffectWriter.cs" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\datamodel2004.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\create-release-installer.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\zh_CN.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\config_engine.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\create-applet-java5.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\de_DE.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\datamodel.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\en_EN.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\languages.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\it_IT.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\gl_ES.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\create-applet.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\ro_RO.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\es_ES.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\ru_RU.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\pt_PT.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\i18n\editor\pt_BR.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\config_editor.xml" />
+     <None Include="Assets\uAdventure\Editor\Resources\EAdventureData\create-release.xml" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WebModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UIAutomation">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Msagl">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/Microsoft.Msagl.dll</HintPath>
+ </Reference>
+ <Reference Include="MoreLinq">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/MoreLinq.dll</HintPath>
+ </Reference>
+ <Reference Include="NetLegacySupport.Tuple">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/NetLegacySupport.Tuple.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Windows.Forms">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Editor/Plugins/System.Windows.Forms.dll</HintPath>
+ </Reference>
+ <Reference Include="LibTess">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/LibTess.dll</HintPath>
+ </Reference>
+ <Reference Include="UniRxUniversal">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/UniRxUniversal.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventure/Plugins/Zip/Ionic.Zip.dll</HintPath>
+ </Reference>
+ <Reference Include="Triangulation">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureGeo/Plugins/Triangulation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Editor/Plugins/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="zxing.unity">
+ <HintPath>C:/Users/pulba/Desktop/uni/JS/proyecto/uAdventure - BotanicaGeo/BotanicoGeo/Assets/uAdventureQR/Plugins/zxing.unity.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/pulba/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{8CA14DC0-2DD2-AA3E-021F-161595344FE0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
