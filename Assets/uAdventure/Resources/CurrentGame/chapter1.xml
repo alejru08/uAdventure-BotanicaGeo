@@ -73,8 +73,20 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="TutorialTerminado" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="Mision1-Red" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="TutorialTerminado" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Guia" />
           <condition />
         </effect>
       </talk-to>
@@ -90,7 +102,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="185" y="292" width="207" height="60" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="184" y="293" width="208" height="58" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <trigger-conversation idTarget="Inicio" />
@@ -102,25 +114,32 @@
       <atrezzo-ref idTarget="playBtton" x="289" y="354" scale="0.2533795" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Estanque" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/JardinBotanicoPrimeraFila.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4095136508784 -3.69270443916272 0.00300622235153725 0.0040662288665545" center="(40.4108819888434, -3.68942141532816)" zoom="17" start="no">
-    <map-element targetId="terrazaSup" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
-    <map-element targetId="acompañante" layer="0" scale="0.7520537" orientation="0">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.411526720799, -3.68935710190367)" zoom="19" start="no">
+    <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
-        <param name="Position">(726.2, 912.6)</param>
+        <param name="Position">(691.0, 1091.2)</param>
         <param name="Rotation">0</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Agave" layer="0" scale="0.09999987" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4119453430176, -3.68981170654297)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">20</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Almez" layer="0" scale="0.1" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4112892150879, -3.69182062149048)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">20</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
   </map-scene>
@@ -158,18 +177,30 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="314" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="319" editor-y="30">
       <speak-char idTarget="acompañante">Podemos buscar frutos de las plantas para alimentar a los animales y que nos dejen acercarnos</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Tambien podemos usar algunas plantas que desprendan aromas distintos que puede tranquilizar al animal</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Y si necesitamos alguna herramienta....seguro que hay restos de madera, ramas y demás que podremos usar</speak-char>
       <condition />
+      <speak-char idTarget="acompañante">Empecemos por fabricarnos una red con la que atraparlos sin hacerles daño.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Necesitaremos una madera resistente para el mango</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Hay un almez cerca de la entrada oeste que irá perfecto.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">También vamos a necesitar fibras para la propia red.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Creo haber visto un agave en la esquina noreste.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Consigue esas plantas y podremos empezar.</speak-char>
+      <condition />
       <speak-char idTarget="acompañante">¿Lo has entendido?</speak-char>
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <option-node nodeindex="2" preListening="yes" editor-x="549" editor-y="50" x="549" y="50">
+    <option-node nodeindex="2" preListening="yes" editor-x="722" editor-y="48" x="722" y="48">
       <speak-player>Alto y claro</speak-player>
       <condition />
       <child nodeindex="3" />
@@ -177,14 +208,12 @@
       <condition />
       <child nodeindex="1" />
     </option-node>
-    <dialogue-node nodeindex="3" editor-x="828" editor-y="85">
+    <dialogue-node nodeindex="3" editor-x="1043" editor-y="76">
       <speak-char idTarget="acompañante">¡Manos a la obra!</speak-char>
       <condition />
       <end-conversation>
         <effect>
           <activate flag="Inicio" />
-          <condition />
-          <trigger-conversation idTarget="Mision1-Red" />
           <condition />
         </effect>
       </end-conversation>
@@ -192,19 +221,11 @@
   </graph-conversation>
   <graph-conversation id="Mision1-Red">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Lo primero es lo primero</speak-char>
+      <speak-char idTarget="acompañante">Para fabricar tu red necesitarás madera de almez y fibras de agave.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Vamos a buscar una forma de contruir una red</speak-char>
+      <speak-char idTarget="acompañante">Recuerdo ver un almez cerca de la entrada oeste.</speak-char>
       <condition />
-      <speak-player>¿Y como vamos a hacer eso?</speak-player>
-      <condition />
-      <speak-char idTarget="acompañante">Hum...creo que de la Pita Agave podemos extraer hilo con el que contruir una red</speak-char>
-      <condition />
-      <speak-player>¿Y cuanta necesitaremos?</speak-player>
-      <condition />
-      <speak-char idTarget="acompañante">Lo ideal seria conseguir 5 hojas de Pita para crearlo</speak-char>
-      <condition />
-      <speak-player>Bien, vamos a por ella</speak-player>
+      <speak-char idTarget="acompañante">El agave debería estar en la esquina noreste del jardín.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -224,4 +245,291 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="FabricarRed">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">¡Estupendo! Dame un momento...</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Aquí tienes tu red. Ahora deberíamos ir a buscar a esos animales invasores.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Segun tengo entendido hay cinco y cada uno requerirá de un trato diferente.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Seguro que si buscamos por el botánico encotramos la forma de atraparlos.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="TutorialTerminado" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Guia">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">Debemos atrapar a los cinco animales invasores antes de que perturben el ecosistema del jardín.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Búscalos dentro del recinto del botánico, no pueden haber ido muy lejos.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Si no consigues atrapar uno, tal vez necesitas encontrar algo que te ayude.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Busca por el jardín. ¡Hay muchas plantas con propiedades útiles!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <object id="Agave" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-player>Las fibras de las hojas de agave son resistentes y se pueden usar para hacer cuerdas e hilo, además las espinas se pueden usar como agujas. ¡Dos en uno!</speak-player>
+          <condition />
+          <remove-element idTarget="Agave" />
+          <condition />
+          <generate-object idTarget="Agave" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="acompañante" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="Agave" />
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Almez" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="acompañante" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="Almez" />
+          <condition />
+          <increment var="componentesRedDados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos la otra parte de la red.</speak-char>
+          <condition>
+            <equals var="componentesRedDados" value="1" />
+          </condition>
+          <trigger-conversation idTarget="FabricarRed" />
+          <condition>
+            <equals var="componentesRedDados" value="2" />
+          </condition>
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Ciprés" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Aligustre" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Cacahuete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Laurel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Uvas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="Olmo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
+  <object id="CedroDelHimalaya" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/item.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <condition />
+          <remove-element idTarget="Almez" />
+          <condition />
+          <generate-object idTarget="Almez" />
+          <condition />
+        </effect>
+      </grab>
+    </actions>
+  </object>
 </eAdventure>
