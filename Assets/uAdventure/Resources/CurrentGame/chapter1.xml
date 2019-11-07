@@ -73,29 +73,8 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="buscandoComida" />
-        </condition>
         <effect>
-          <trigger-conversation idTarget="buscandoComida" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="buscandoMedicinas" />
-        </condition>
-        <effect>
-          <trigger-conversation idTarget="buscandoMedicinas" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="buscandoMadera" />
-        </condition>
-        <effect>
-          <trigger-conversation idTarget="buscandoMadera" />
+          <trigger-conversation idTarget="Mision1-Red" />
           <condition />
         </effect>
       </talk-to>
@@ -113,28 +92,27 @@
     <exits>
       <exit rectangular="yes" x="185" y="292" width="207" height="60" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <trigger-conversation idTarget="Inicio" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <atrezzo>
       <atrezzo-ref idTarget="playBtton" x="289" y="354" scale="0.2533795" layer="0" />
     </atrezzo>
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4095136508784 -3.69270443916272 0.00300622235153725 0.0040662288665545" center="(40.4108819888434, -3.68942141532816)" zoom="18" start="no">
-    <map-element targetId="ornamentales" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
-    <map-element targetId="rosaleda" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
-    <map-element targetId="huertaYfrutales" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
-    <map-element targetId="terrazaIzq" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
-    <map-element targetId="terrazaDer" layer="0" scale="1" orientation="0">
-      <condition />
-    </map-element>
+  <scene id="Estanque" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/JardinBotanicoPrimeraFila.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4095136508784 -3.69270443916272 0.00300622235153725 0.0040662288665545" center="(40.4108819888434, -3.68942141532816)" zoom="17" start="no">
     <map-element targetId="terrazaSup" layer="0" scale="1" orientation="0">
       <condition />
     </map-element>
@@ -146,186 +124,6 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <geoelement id="ornamentales">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4123033970316 -3.69258642196714 40.4124157196744 -3.69150280952556 40.4116927670472 -3.69134724140238 40.411545724879 -3.69241476059028</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">Esta zona está llena de arbustos florales y otras plantas decorativas.</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
-  <geoelement id="rosaleda">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4114660768997 -3.69239062070863 40.4107165644126 -3.69221895933166 40.4108615661173 -3.69115680456177 40.4116253727559 -3.69132578372972</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">Esta zona es una rosaleda rodeada de altos árboles.</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
-  <geoelement id="huertaYfrutales">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4097321783437 -3.69198560714704 40.4106675496417 -3.69219481945021 40.410802340067 -3.69115412235243 40.4097485168185 -3.69092345237715</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">Aqui parece haber zonas de cultivo y árboles con frutos.</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
-  <geoelement id="terrazaIzq">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4111935778619 -3.69111375657353 40.4112834375163 -3.69039847966319 40.4122153921511 -3.69061305638436 40.4124032774586 -3.69139270631102</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">Esta es la parte izquierda de la terraza central (PROVISIONAL)</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
-  <geoelement id="terrazaDer">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4097558075154 -3.69078652707402 40.4101560988645 -3.69014098694324 40.4111084919798 -3.69034483482837 40.4110227166761 -3.69108157006563</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">Esta es la parte derecha de la terraza central (PROVISIONAL)</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
-  <geoelement id="terrazaSup">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.412170651849 -3.69042456150088 40.4102427538253 -3.68999540805848 40.4105695200895 -3.68942141532927 40.4120113572836 -3.6897432804111</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <speak-char idTarget="acompañante">En esta zona hay plantas muy variadas, desde altos árboles hasta flores.</speak-char>
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geoelement>
   <atrezzoobject id="playBtton">
     <resources name="No name">
       <asset type="image" uri="assets/image/play.png" />
@@ -342,72 +140,87 @@
   </atrezzoobject>
   <graph-conversation id="Inicio">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Ha sido una buena idea venir al Jardín Botánico para escondernos de los zombis.</speak-char>
+      <speak-char idTarget="acompañante">Buenas compañero</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Aquí hay muchas plantas útiles que podemos utilizar para sobrevivir.</speak-char>
+      <speak-char idTarget="acompañante">Te agradezco mucho que hayas podido venir a ayudarnos</speak-char>
       <condition />
-      <speak-player>¿Que crees que deberíamos hacer primero?</speak-player>
+      <speak-char idTarget="acompañante">El jardín botanico esta plagado de especies invasoras que lo estan destrozando</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Tenemos que capturarlos</speak-char>
+      <condition />
+      <speak-player>Vale, entendido</speak-player>
+      <condition />
+      <speak-char idTarget="acompañante">Lo malo es que nos hemos quedado sin materiales y herramientas...</speak-char>
+      <condition />
+      <speak-player>Podemos usar los restos de las plantas que hayan dejado por ahi los animales</speak-player>
+      <condition />
+      <speak-char idTarget="acompañante">Hum...me da que no tenemos otra opcion</speak-char>
       <condition />
       <child nodeindex="1" />
-      <effect>
-        <activate flag="Inicio" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="498" editor-y="103" x="498" y="103">
-      <speak-player>Buscar comida.</speak-player>
+    <dialogue-node nodeindex="1" editor-x="314" editor-y="50">
+      <speak-char idTarget="acompañante">Podemos buscar frutos de las plantas para alimentar a los animales y que nos dejen acercarnos</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Tambien podemos usar algunas plantas que desprendan aromas distintos que puede tranquilizar al animal</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Y si necesitamos alguna herramienta....seguro que hay restos de madera, ramas y demás que podremos usar</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">¿Lo has entendido?</speak-char>
       <condition />
       <child nodeindex="2" />
-      <speak-player>Buscar medicinas.</speak-player>
+    </dialogue-node>
+    <option-node nodeindex="2" preListening="yes" editor-x="549" editor-y="50" x="549" y="50">
+      <speak-player>Alto y claro</speak-player>
       <condition />
       <child nodeindex="3" />
-      <speak-player>Buscar madera para herramientas.</speak-player>
+      <speak-player>Si, pero si quieres explicarmelo otra vez no te diré que no</speak-player>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="1" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="773" editor-y="57">
+    <dialogue-node nodeindex="3" editor-x="828" editor-y="85">
+      <speak-char idTarget="acompañante">¡Manos a la obra!</speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <activate flag="buscandoComida" />
+          <activate flag="Inicio" />
           <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="776" editor-y="255">
-      <end-conversation>
-        <effect>
-          <activate flag="buscandoMedicinas" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="778" editor-y="449">
-      <end-conversation>
-        <effect>
-          <activate flag="buscandoMadera" />
+          <trigger-conversation idTarget="Mision1-Red" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="buscandoComida">
+  <graph-conversation id="Mision1-Red">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Deberíamos encontrar algo para comer o no duraremos mucho.</speak-char>
+      <speak-char idTarget="acompañante">Lo primero es lo primero</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Vamos a buscar una forma de contruir una red</speak-char>
+      <condition />
+      <speak-player>¿Y como vamos a hacer eso?</speak-player>
+      <condition />
+      <speak-char idTarget="acompañante">Hum...creo que de la Pita Agave podemos extraer hilo con el que contruir una red</speak-char>
+      <condition />
+      <speak-player>¿Y cuanta necesitaremos?</speak-player>
+      <condition />
+      <speak-char idTarget="acompañante">Lo ideal seria conseguir 5 hojas de Pita para crearlo</speak-char>
+      <condition />
+      <speak-player>Bien, vamos a por ella</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="buscandoMedicinas">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Si encontramos medicinas estaremos preparados si nos ocurre algo.</speak-char>
-      <condition />
+  <graph-conversation id="PeleaComida">
+    <dialogue-node nodeindex="0" editor-x="51" editor-y="52">
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="buscandoMadera">
+  <graph-conversation id="PeleaAroma">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Si encontráramos madera podríamos fabricar algo con lo que defendernos.</speak-char>
-      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PeleaHerramienta">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <end-conversation />
     </dialogue-node>
   </graph-conversation>

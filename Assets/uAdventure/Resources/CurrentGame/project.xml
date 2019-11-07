@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
+<entry key="Chapter0.Estanque.X">292</entry>
+<entry key="Chapter0.Estanque.Y">22</entry>
 </properties>
