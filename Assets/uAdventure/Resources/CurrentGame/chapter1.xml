@@ -168,7 +168,7 @@
       <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4115900470276, -3.6900303363662)" zoom="19" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4116901173613, -3.69069284199292)" zoom="19" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -176,10 +176,10 @@
         <param name="Rotation">0</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Agave" layer="0" scale="0.09999987" orientation="0">
+    <map-element targetId="Agave" layer="0" scale="0.03502054" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4119453430176, -3.68981170654297)</param>
+        <param name="Position">(40.411922454834, -3.68987464904785)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">20</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -220,6 +220,16 @@
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4114074707031, -3.69025015830994)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Aligustre" layer="0" scale="0.105557" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4117965698242, -3.69112205505371)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -360,9 +370,74 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="CotorrasExaminar">
+    <dialogue-node nodeindex="0" editor-x="135" editor-y="78">
+      <speak-player>Una bandada de cotorras, posiblemente argentinas por el tamaño del pico</speak-player>
+      <condition />
+      <speak-player>El de las cotorras</speak-player>
+      <condition />
+      <speak-player>Tendremos que usar algo para alejarlas del árbol</speak-player>
+      <condition />
+      <speak-player>luego podemos intentar juntarlas en un lugar</speak-player>
+      <condition />
+      <speak-player>Podríamos usar comida para atraerlas, cuando las hayamos hecho volar</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="AligustreExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="49">
+      <speak-char idTarget="acompañante">Ten cuidado con eso, es aligustre</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">podría darte una infección si lo consumes.</speak-char>
+      <condition />
+      <speak-player>He escuchado que a los pájaros les encanta. Eso explica a las palomas.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MapacheExaminar">
+    <dialogue-node nodeindex="0" editor-x="195" editor-y="59">
+      <speak-player>Estos son mapaches, una especie originaria de América.</speak-player>
+      <condition />
+      <speak-player>Es una especie invasora en España. Empezó a ser traida como mascotas y han pasado a ser un riesgo para Europa.</speak-player>
+      <condition />
+      <speak-player>Debemos tener cuidado, pues pueden traer patógenos que son nocivos para el ecosistema y los humanos</speak-player>
+      <condition />
+      <speak-player>Estos mapaches parecen tener más hambre que interés en nosotros. Quizás si les damos algo cooperen más.</speak-player>
+      <condition />
+      <speak-player>El de la derecha parece tener un dolor de estómago.</speak-player>
+      <condition />
+      <speak-player>Podríamos buscar algo con que ayudarlo, alguna planta medicinal.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="LaurelExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Unas hojas de laurel.</speak-player>
+      <condition />
+      <speak-player>Se usan para la comida, pero no es tiempo de meriendas.</speak-player>
+      <condition />
+      <speak-player>Así como se usa para sasonar, puedes usarla para tratar un dolor estomacal.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="VisonExaminar">
+    <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
+      <speak-player>Este es un visón. Es una especie invasora, que proviene de América.</speak-player>
+      <condition />
+      <speak-player>Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-player>
+      <condition />
+      <speak-player>Parece que tendremos que sacarlo de su madrigera de alguna forma. Quizás podamos hacerlo salir con humo.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <object id="Agave" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
+      <asset type="image" uri="assets/image/agave.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -458,6 +533,7 @@
           <condition />
         </effect>
       </grab>
+      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no" />
     </actions>
   </object>
   <object id="Aligustre" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -484,6 +560,13 @@
           <condition />
         </effect>
       </grab>
+      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no" />
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="AligustreExaminar" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
   <object id="Cacahuete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -514,8 +597,8 @@
   </object>
   <object id="Laurel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/Laurel.png" />
+      <asset type="icon" uri="assets/icon/Laurel.png" />
     </resources>
     <description>
       <name>
@@ -536,12 +619,18 @@
           <condition />
         </effect>
       </grab>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="LaurelExaminar" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
   <object id="Uvas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/Uvas.png" />
+      <asset type="icon" uri="assets/icon/Uvas.png" />
     </resources>
     <description>
       <name>
@@ -651,6 +740,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="VisonExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="Mapaches" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -665,6 +762,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="MapacheExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="MapacheMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -701,6 +806,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="CotorrasExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="cotorraMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
