@@ -168,18 +168,38 @@
       <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4116901173613, -3.69069284199292)" zoom="19" start="no">
+  <scene id="EscenaTortuga" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="EscenaCangrejo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4107547602743, -3.69030660389469)" zoom="18" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
-        <param name="Position">(691.0, 1093.8)</param>
+        <param name="Position">(689.2, 1095.6)</param>
         <param name="Rotation">0</param>
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Agave" layer="0" scale="0.03502054" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.411922454834, -3.68987464904785)</param>
+        <param name="Position">(40.4119491577148, -3.68988537788391)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">20</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -196,30 +216,36 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="VisonMapa" layer="0" scale="0.03506703" orientation="0">
-      <condition />
+    <map-element targetId="VisonMapa" layer="0" scale="0.05" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4117622375488, -3.69032263755798)</param>
+        <param name="Position">(40.4118003845215, -3.69162893295288)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="cotorraMapa" layer="0" scale="0.04919124" orientation="0">
-      <condition />
+    <map-element targetId="cotorraMapa" layer="0" scale="0.05" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4114761352539, -3.69089388847351)</param>
+        <param name="Position">(40.4117813110352, -3.69065260887146)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="MapacheMapa" layer="0" scale="0.05565497" orientation="0">
-      <condition />
+    <map-element targetId="MapacheMapa" layer="0" scale="0.05000007" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4114074707031, -3.69025015830994)</param>
+        <param name="Position">(40.4104118347168, -3.69144105911255)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -227,11 +253,61 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Aligustre" layer="0" scale="0.105557" orientation="0">
-      <condition />
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4117965698242, -3.69112205505371)</param>
+        <param name="Position">(40.4115219116211, -3.69013357162476)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Laurel" layer="0" scale="0.05" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4107284545898, -3.69157934188843)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Uvas" layer="0" scale="0.05" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.411247253418, -3.68959450721741)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">20</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Olmo" layer="0" scale="0.1000001" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4116363525391, -3.69118762016296)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">20</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="CedroDelHimalaya" layer="0" scale="0.1" orientation="0">
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4105262756348, -3.69041514396667)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">20</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -324,26 +400,13 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PeleaComida">
-    <dialogue-node nodeindex="0" editor-x="51" editor-y="52">
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="PeleaAroma">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="PeleaHerramienta">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="FabricarRed">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="acompañante">¡Estupendo! Dame un momento...</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Aquí tienes tu red. Ahora deberíamos ir a buscar a esos animales invasores.</speak-char>
+      <speak-char idTarget="acompañante">Aquí tienes tu red. Te la pongo en la mochila. </speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Ahora deberíamos ir a buscar a esos animales invasores.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Segun tengo entendido hay cinco y cada uno requerirá de un trato diferente.</speak-char>
       <condition />
@@ -352,6 +415,8 @@
       <end-conversation>
         <effect>
           <activate flag="TutorialTerminado" />
+          <condition />
+          <generate-object idTarget="Red" />
           <condition />
         </effect>
       </end-conversation>
@@ -370,67 +435,93 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="CotorrasExaminar">
-    <dialogue-node nodeindex="0" editor-x="135" editor-y="78">
-      <speak-player>Una bandada de cotorras, posiblemente argentinas por el tamaño del pico</speak-player>
-      <condition />
-      <speak-player>El de las cotorras</speak-player>
-      <condition />
-      <speak-player>Tendremos que usar algo para alejarlas del árbol</speak-player>
-      <condition />
-      <speak-player>luego podemos intentar juntarlas en un lugar</speak-player>
-      <condition />
-      <speak-player>Podríamos usar comida para atraerlas, cuando las hayamos hecho volar</speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="AligustreExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="49">
-      <speak-char idTarget="acompañante">Ten cuidado con eso, es aligustre</speak-char>
+      <speak-char idTarget="acompañante">Eso es aligustre, una planta cuyos frutos son muy apreciados por las aves.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">podría darte una infección si lo consumes.</speak-char>
-      <condition />
-      <speak-player>He escuchado que a los pájaros les encanta. Eso explica a las palomas.</speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="MapacheExaminar">
-    <dialogue-node nodeindex="0" editor-x="195" editor-y="59">
-      <speak-player>Estos son mapaches, una especie originaria de América.</speak-player>
-      <condition />
-      <speak-player>Es una especie invasora en España. Empezó a ser traida como mascotas y han pasado a ser un riesgo para Europa.</speak-player>
-      <condition />
-      <speak-player>Debemos tener cuidado, pues pueden traer patógenos que son nocivos para el ecosistema y los humanos</speak-player>
-      <condition />
-      <speak-player>Estos mapaches parecen tener más hambre que interés en nosotros. Quizás si les damos algo cooperen más.</speak-player>
-      <condition />
-      <speak-player>El de la derecha parece tener un dolor de estómago.</speak-player>
-      <condition />
-      <speak-player>Podríamos buscar algo con que ayudarlo, alguna planta medicinal.</speak-player>
+      <speak-char idTarget="acompañante">Pero no intentes probarlas, para nosotros son bastante venenosas.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="LaurelExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Unas hojas de laurel.</speak-player>
+      <speak-char idTarget="acompañante">Es un laurel, sus hojas son famosas como condimento en la cocina mediterránea.</speak-char>
       <condition />
-      <speak-player>Se usan para la comida, pero no es tiempo de meriendas.</speak-player>
+      <speak-player>Lo que mucha gente no sabe es que antigüamente se usaban en medicina.</speak-player>
       <condition />
-      <speak-player>Así como se usa para sasonar, puedes usarla para tratar un dolor estomacal.</speak-player>
+      <speak-player>Puedes usarla para tratar un dolor estomacal, o hacer un aceite para las articulaciones.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="OlmoExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">Es un olmo, un árbol de hoja caduca que se extiende por todo el hemisferio norte.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Se puede usar su corteza para fabricar una tintura contra las infecciones de bacterias.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Aun se utiliza cuando las bcterias son resistentes a los antibióticos.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="VisonExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
-      <speak-player>Este es un visón. Es una especie invasora, que proviene de América.</speak-player>
+      <speak-char idTarget="acompañante">Es un visón, una especie invasora que proviene de América.</speak-char>
       <condition />
-      <speak-player>Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-player>
+      <speak-char idTarget="acompañante">Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-char>
       <condition />
-      <speak-player>Parece que tendremos que sacarlo de su madrigera de alguna forma. Quizás podamos hacerlo salir con humo.</speak-player>
+      <speak-char idTarget="acompañante">Parece que está herido y por eso se muestra agresivo.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Con la corteza de olmo se puede hacer una tintura que le curará la infección.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MapacheExaminar">
+    <dialogue-node nodeindex="0" editor-x="195" editor-y="59">
+      <speak-char idTarget="acompañante">Estos son mapaches, una especie originaria de América.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Es una especie invasora en España. Empezó a ser traida como mascotas y han pasado a ser un riesgo para Europa.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Debemos tener cuidado, pues pueden traer patógenos que son nocivos para el ecosistema y los humanos</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Estos mapaches parecen haberse atiborrado a comida de la huerta y ahora están sufriendo un empacho.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">El laurel sirve como medicina estomacal, tal vez si les damos un poco estén mas dispuestos a cooperar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CotorrasExaminar">
+    <dialogue-node nodeindex="0" editor-x="135" editor-y="77">
+      <speak-char idTarget="acompañante">Una bandada de cotorras, posiblemente argentinas por el tamaño del pico.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="tortugaExaminar">
+    <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="cangrejoExaminar">
+    <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Final">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">¡Enhorabuena! Has capturado a todos los animales invasores.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Has ayudado a proteger el botánico y el ecosistema de Madrid.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">¡Y de paso has aprendido algunas cosas interesantes sobre el jardín y sus plantas!</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -451,16 +542,30 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-player>Las fibras de las hojas de agave son resistentes y se pueden usar para hacer cuerdas e hilo, además las espinas se pueden usar como agujas. ¡Dos en uno!</speak-player>
-          <condition />
           <remove-element idTarget="Agave" />
           <condition />
           <generate-object idTarget="Agave" />
           <condition />
         </effect>
       </grab>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">Las fibras de las hojas de agave son resistentes y se pueden usar para hacer cuerdas e hilo, además las espinas se pueden usar como agujas. ¡Dos en uno!</speak-char>
+          <condition />
+        </effect>
+      </examine>
       <give-to idTarget="acompañante" needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
+          <increment var="componentesRedDados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos la otra parte de la red.</speak-char>
+          <condition>
+            <equals var="componentesRedDados" value="1" />
+          </condition>
+          <trigger-conversation idTarget="FabricarRed" />
+          <condition>
+            <equals var="componentesRedDados" value="2" />
+          </condition>
           <consume-object idTarget="Agave" />
           <condition />
         </effect>
@@ -483,18 +588,22 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
-          <condition />
           <remove-element idTarget="Almez" />
           <condition />
           <generate-object idTarget="Almez" />
           <condition />
         </effect>
       </grab>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <speak-char idTarget="acompañante">La madera de almez es dura y resistente, por eso se ha usado durante generaciones para fabricar herramientas de labranza.</speak-char>
+          <condition />
+          <speak-char idTarget="acompañante">Tambiés es útil para hacaer carbon vegetal.</speak-char>
+          <condition />
+        </effect>
+      </examine>
       <give-to idTarget="acompañante" needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <consume-object idTarget="Almez" />
-          <condition />
           <increment var="componentesRedDados" value="1" />
           <condition />
           <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos la otra parte de la red.</speak-char>
@@ -505,13 +614,15 @@
           <condition>
             <equals var="componentesRedDados" value="2" />
           </condition>
+          <consume-object idTarget="Almez" />
+          <condition />
         </effect>
       </give-to>
     </actions>
   </object>
-  <object id="Ciprés" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Red" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
+      <asset type="image" uri="assets/image/red.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -523,17 +634,69 @@
       </detailed>
     </description>
     <actions>
-      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="cotorrasCalmadas" />
+        </condition>
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <increment var="animalesAtrapados" value="1" />
           <condition />
-          <remove-element idTarget="Almez" />
+          <speak-char idTarget="acompañante">¡Genial! Otro capturado.</speak-char>
           <condition />
-          <generate-object idTarget="Almez" />
+          <remove-element idTarget="Cotorras" />
           <condition />
+          <remove-element idTarget="cotorraMapa" />
+          <condition />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Final" />
+          <condition>
+            <equals var="animalesAtrapados" value="5" />
+          </condition>
         </effect>
-      </grab>
-      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no" />
+      </use-with>
+      <use-with idTarget="Mapaches" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="MapachesCalmados" />
+        </condition>
+        <effect>
+          <increment var="animalesAtrapados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">¡Genial! Otro capturado.</speak-char>
+          <condition />
+          <remove-element idTarget="Mapaches" />
+          <condition />
+          <remove-element idTarget="MapacheMapa" />
+          <condition />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Final" />
+          <condition>
+            <equals var="animalesAtrapados" value="5" />
+          </condition>
+        </effect>
+      </use-with>
+      <use-with idTarget="Vison" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="visonCalmado" />
+        </condition>
+        <effect>
+          <increment var="animalesAtrapados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">¡Genial! Otro capturado.</speak-char>
+          <condition />
+          <remove-element idTarget="Vison" />
+          <condition />
+          <remove-element idTarget="VisonMapa" />
+          <condition />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Final" />
+          <condition>
+            <equals var="animalesAtrapados" value="5" />
+          </condition>
+        </effect>
+      </use-with>
     </actions>
   </object>
   <object id="Aligustre" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -552,47 +715,28 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
-          <condition />
           <remove-element idTarget="Almez" />
           <condition />
           <generate-object idTarget="Almez" />
           <condition />
         </effect>
       </grab>
-      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no" />
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <trigger-conversation idTarget="AligustreExaminar" />
           <condition />
         </effect>
       </examine>
-    </actions>
-  </object>
-  <object id="Cacahuete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+      <use-with idTarget="Cotorras" needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <consume-object idTarget="Aligustre" />
           <condition />
-          <remove-element idTarget="Almez" />
+          <activate flag="cotorrasCalmadas" />
           <condition />
-          <generate-object idTarget="Almez" />
+          <speak-char idTarget="acompañante">¡Mira! Se han lanzado todas a comerse las semillas. Ahora puedes usar la red para atraparlas.</speak-char>
           <condition />
         </effect>
-      </grab>
+      </use-with>
     </actions>
   </object>
   <object id="Laurel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -611,11 +755,9 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <remove-element idTarget="Laurel" />
           <condition />
-          <remove-element idTarget="Almez" />
-          <condition />
-          <generate-object idTarget="Almez" />
+          <generate-object idTarget="Laurel" />
           <condition />
         </effect>
       </grab>
@@ -625,32 +767,16 @@
           <condition />
         </effect>
       </examine>
-    </actions>
-  </object>
-  <object id="Uvas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/Uvas.png" />
-      <asset type="icon" uri="assets/icon/Uvas.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+      <use-with idTarget="Mapaches" needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <consume-object idTarget="Laurel" />
           <condition />
-          <remove-element idTarget="Almez" />
+          <activate flag="MapachesCalmados" />
           <condition />
-          <generate-object idTarget="Almez" />
+          <speak-char idTarget="acompañante">Parece que se les ha pasado el dolor de tripa y estan mas calmados. Quizá ahora se dejen atrapar si usas la red.</speak-char>
           <condition />
         </effect>
-      </grab>
+      </use-with>
     </actions>
   </object>
   <object id="Olmo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -669,11 +795,49 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <remove-element idTarget="Olmo" />
           <condition />
-          <remove-element idTarget="Almez" />
+          <generate-object idTarget="Olmo" />
           <condition />
-          <generate-object idTarget="Almez" />
+        </effect>
+      </grab>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="OlmoExaminar" />
+          <condition />
+        </effect>
+      </examine>
+      <use-with idTarget="Vison" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="Olmo" />
+          <condition />
+          <activate flag="visonCalmado" />
+          <condition />
+          <speak-char idTarget="acompañante">Parece que ya le está bajando la inflamación y se muestra mas amistoso. Prueba a usar la red para atraparlo.</speak-char>
+          <condition />
+        </effect>
+      </use-with>
+    </actions>
+  </object>
+  <object id="Uvas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Uvas.png" />
+      <asset type="icon" uri="assets/icon/Uvas.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="Uvas" />
+          <condition />
+          <generate-object idTarget="Uvas" />
           <condition />
         </effect>
       </grab>
@@ -705,28 +869,6 @@
       </grab>
     </actions>
   </object>
-  <object id="VisonMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/vison.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-scene idTarget="EscenaDelVison" x="785" y="541" transitionTime="0" transitionType="0" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
   <object id="Vison" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/vison.png" />
@@ -744,6 +886,28 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <trigger-conversation idTarget="VisonExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="VisonMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="EscenaDelVison" x="785" y="541" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
       </examine>
@@ -785,12 +949,12 @@
       </detailed>
     </description>
     <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <trigger-scene idTarget="EscenaDeMapaches" x="735" y="612" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
-      </use>
+      </examine>
     </actions>
   </object>
   <object id="Cotorras" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -829,12 +993,100 @@
       </detailed>
     </description>
     <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <trigger-scene idTarget="EscenaCotorras" x="739" y="523" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
-      </use>
+      </examine>
+    </actions>
+  </object>
+  <object id="tortuga" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="tortugaExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="tortugaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="EscenaTortuga" x="400" y="450" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="cangrejo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="cangrejoExaminar" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="cangrejoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cotorra.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="EscenaCangrejo" x="400" y="450" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
 </eAdventure>
