@@ -123,13 +123,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1278" y="-6" width="300" height="97" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
     <objects>
-      <object-ref idTarget="Vison" x="661" y="684" scale="0.2031045" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Vison" x="663" y="703" scale="0.2940905" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1409" y="146" scale="0.6035272" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="EscenaDeMapaches" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -141,13 +137,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1148" y="-8" width="332" height="105" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
     <objects>
-      <object-ref idTarget="Mapaches" x="705" y="821" scale="0.8333333" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Mapaches" x="705" y="821" scale="0.8333333" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1329" y="152" scale="0.608752" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="EscenaCotorras" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -159,36 +151,36 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1040" y="-8" width="451" height="97" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
     <objects>
-      <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1322" y="151" scale="0.6100508" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="EscenaTortuga" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/fondoTortuga.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="tortuga" x="305" y="571" scale="0.6606162" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1311" y="149" scale="0.5977019" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="EscenaCangrejo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/fondoCangrejos.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4107547602743, -3.69030660389469)" zoom="18" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4111570879498, -3.69107639788175)" zoom="19" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -252,12 +244,12 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Aligustre" layer="0" scale="0.105557" orientation="0">
+    <map-element targetId="Aligustre" layer="0" scale="0.02521925" orientation="0">
       <condition>
         <active flag="TutorialTerminado" />
       </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4115219116211, -3.69013357162476)</param>
+        <param name="Position">(40.4116821289063, -3.69019651412964)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -444,6 +436,32 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="AlmezExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Esta es una rama de almez, un árbol caducifolio.</speak-player>
+      <condition />
+      <speak-player>Tiene muchas utilidades, y se ha llevado de Europa a otras partes del mundo.</speak-player>
+      <condition />
+      <speak-player>Las ramas se han utilizado desde tiempos antiguos para horquillas.</speak-player>
+      <condition />
+      <speak-player>No haremos una horquilla, pero nos servirá para hacer el mango de la red</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CedroExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Esto es un cedro del Himalaya. Es una conífera.</speak-player>
+      <condition />
+      <speak-player>Se usa como un aromático, y para espantar a los bichos del ganado.</speak-player>
+      <condition />
+      <speak-player>También tiene una resistencia a la putrefacción que causa el agua.</speak-player>
+      <condition />
+      <speak-player>Lo puedes encontrar como perfumes, aerosoles, insecticidas y ceras</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="LaurelExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="acompañante">Es un laurel, sus hojas son famosas como condimento en la cocina mediterránea.</speak-char>
@@ -466,15 +484,43 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="VisonExaminar">
-    <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
-      <speak-char idTarget="acompañante">Es un visón, una especie invasora que proviene de América.</speak-char>
+  <graph-conversation id="UvasExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Esta es una vid de uvas.</speak-player>
       <condition />
-      <speak-char idTarget="acompañante">Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-char>
+      <speak-player>Con ellas se pueden producir agraz, vino y vinagre, entre otros, pero saben dulces si te las comes frescas.</speak-player>
       <condition />
-      <speak-char idTarget="acompañante">Parece que está herido y por eso se muestra agresivo.</speak-char>
+      <speak-player>Es originaria de Europa y Asia central, pero se ha introducido en otros lados del mundo también.</speak-player>
       <condition />
-      <speak-char idTarget="acompañante">Con la corteza de olmo se puede hacer una tintura que le curará la infección.</speak-char>
+      <speak-player>Es parte de la dieta de muchos animales, así como de muchos humanos. Parece que tenemos doce.</speak-player>
+      <condition />
+      <speak-player>¡Pide un deseo por cada uva!</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="cangrejoExaminar">
+    <dialogue-node nodeindex="0" editor-x="190" editor-y="69">
+      <speak-player>Estos son cangrejos americanos. Como verás, son de América, y viven en los ríos.</speak-player>
+      <condition />
+      <speak-player>Es muy resistente y adaptable a las adversidades, y se ha propagado por parte del mundo, siendo comprado como mascotas, o traido para ser criado.</speak-player>
+      <condition />
+      <speak-player>Lamentablemente trae consigo muchos patógenos que dañan a la fauna local, y destruyen los ríos con sus madrigeras.</speak-player>
+      <condition />
+      <speak-player>Quizás podríamos hacerles un recipiente con agua para llevarlos a otro lugar.</speak-player>
+      <condition />
+      <speak-player>Necesitaremos madera que no le afecte el agua para poder hacer el recipiente.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CotorrasExaminar">
+    <dialogue-node nodeindex="0" editor-x="135" editor-y="77">
+      <speak-char idTarget="acompañante">Una bandada de cotorras, posiblemente argentinas por el tamaño del pico.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -494,24 +540,29 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="CotorrasExaminar">
-    <dialogue-node nodeindex="0" editor-x="135" editor-y="77">
-      <speak-char idTarget="acompañante">Una bandada de cotorras, posiblemente argentinas por el tamaño del pico.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="tortugaExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
+      <speak-player>Esta parecer ser una galápago de Florida. Mírale las orejas rojas.</speak-player>
+      <condition />
+      <speak-player>Estas tortugas son originarias de América, pero se han esparcido por todo el mundo como mascotas y regalos de cumpleaños.</speak-player>
+      <condition />
+      <speak-player>Lamentablemente, así se han convertido en una especie invasora, al ser liberadas o soltadas en la naturaleza.</speak-player>
+      <condition />
+      <speak-player>Ésta parece estar a su rollo. Puede que te la ganes si le das alguna fruta.</speak-player>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="cangrejoExaminar">
+  <graph-conversation id="VisonExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
+      <speak-char idTarget="acompañante">Es un visón, una especie invasora que proviene de América.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Parece que está herido y por eso se muestra agresivo.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Con la corteza de olmo se puede hacer una tintura que le curará la infección.</speak-char>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
@@ -529,7 +580,7 @@
   <object id="Agave" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/agave.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="icon" uri="assets/icon/hiloAgave.png" />
     </resources>
     <description>
       <name>
@@ -574,8 +625,8 @@
   </object>
   <object id="Almez" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/Almez.png" />
+      <asset type="icon" uri="assets/icon/Almez.png" />
     </resources>
     <description>
       <name>
@@ -701,8 +752,8 @@
   </object>
   <object id="Aligustre" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/aligustre.png" />
+      <asset type="icon" uri="assets/icon/aligustreSemillas.png" />
     </resources>
     <description>
       <name>
@@ -781,8 +832,8 @@
   </object>
   <object id="Olmo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/olmo.png" />
+      <asset type="icon" uri="assets/icon/JugoDeOlmo.png" />
     </resources>
     <description>
       <name>
@@ -841,12 +892,29 @@
           <condition />
         </effect>
       </grab>
+      <use-with idTarget="tortuga" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="Uvas" />
+          <condition />
+          <activate flag="TortugaCalmada" />
+          <condition />
+          <speak-char idTarget="acompañante">
+          </speak-char>
+          <condition />
+        </effect>
+      </use-with>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Inicio" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
   <object id="CedroDelHimalaya" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/item.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/cedroHimalayense.png" />
+      <asset type="icon" uri="assets/icon/ramaCedro.png" />
     </resources>
     <description>
       <name>
@@ -867,6 +935,23 @@
           <condition />
         </effect>
       </grab>
+      <use-with idTarget="cangrejo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <consume-object idTarget="CedroDelHimalaya" />
+          <condition />
+          <activate flag="CangrejosTomados" />
+          <condition />
+          <speak-char idTarget="acompañante">
+          </speak-char>
+          <condition />
+        </effect>
+      </use-with>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Inicio" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
   <object id="Vison" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -1003,7 +1088,7 @@
   </object>
   <object id="tortuga" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="image" uri="assets/image/galapago.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1047,7 +1132,7 @@
   </object>
   <object id="cangrejo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="image" uri="assets/image/FondoCangrejos_FondoEstanque.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1069,7 +1154,7 @@
   </object>
   <object id="cangrejoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/cotorra.png" />
+      <asset type="image" uri="assets/image/cangrejo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1087,6 +1172,28 @@
           <condition />
         </effect>
       </examine>
+    </actions>
+  </object>
+  <object id="BackButton" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/flecha.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-last-scene />
+          <condition />
+        </effect>
+      </use>
     </actions>
   </object>
 </eAdventure>
