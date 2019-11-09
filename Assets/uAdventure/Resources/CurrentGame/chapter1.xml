@@ -180,11 +180,11 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4111570879498, -3.69107639788175)" zoom="19" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4105770818031, -3.69083499907009)" zoom="18" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
-        <param name="Position">(689.2, 1095.6)</param>
+        <param name="Position">(735.4, 1086.5)</param>
         <param name="Rotation">0</param>
       </ext-elem-ref>
     </map-element>
@@ -198,10 +198,10 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Almez" layer="0" scale="0.1" orientation="0">
+    <map-element targetId="Almez" layer="0" scale="0.0769624" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4112892150879, -3.69182062149048)</param>
+        <param name="Position">(40.4112701416016, -3.69181656837463)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">20</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -423,6 +423,19 @@
       <speak-char idTarget="acompañante">Si no consigues atrapar uno, tal vez necesitas encontrar algo que te ayude.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Busca por el jardín. ¡Hay muchas plantas con propiedades útiles!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="AgaveExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Este es un agave o maguey</speak-player>
+      <condition />
+      <speak-player>Es nativa de México, centroamérica y el caribe, pero se ha introducido a otras regiones.</speak-player>
+      <condition />
+      <speak-player>Su principal uso fue y es la creación del mezcal. Uno de los más famosos es el mezcal de Tequila.</speak-player>
+      <condition />
+      <speak-player>También se usa su fibra para hacer cuerdas, por lo que nos vendrá bien a la hora de hacer la red.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
