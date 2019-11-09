@@ -74,6 +74,15 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
+          <equals var="componentesRedDados" value="1" />
+        </condition>
+        <effect>
+          <speak-char idTarget="acompañante">Ahora tenemos que encontrar la otra parte y podré hacerte tu red.</speak-char>
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
           <equals var="componentesRedDados" value="2" />
         </condition>
         <effect>
@@ -132,12 +141,17 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1084" y="38" width="186" height="88" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="Vison" x="663" y="703" scale="0.2940905" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BackButton" x="1409" y="146" scale="0.6035272" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Vison" x="627" y="677" scale="0.2" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1175" y="146" scale="0.4893" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="acompañante" x="1341" y="1157" scale="0.9569296" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="acompañante" x="1191" y="1141" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="EscenaDeMapaches" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -149,12 +163,17 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1198" y="22" width="190" height="92" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
       <object-ref idTarget="Mapaches" x="705" y="821" scale="0.8333333" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BackButton" x="1329" y="152" scale="0.608752" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1289" y="139" scale="0.5122199" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="acompañante" x="1384" y="1282" scale="1.09916" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="acompañante" x="1354" y="1237" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="EscenaCotorras" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -166,12 +185,17 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="966" y="14" width="208" height="102" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BackButton" x="1322" y="151" scale="0.6100508" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Cotorras" x="785" y="614" scale="0.8238252" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1072" y="141" scale="0.554623" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="acompañante" x="1431" y="1123" scale="0.9510094" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="acompañante" x="1075" y="1121" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="EscenaTortuga" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -183,12 +207,17 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1180" y="11" width="195" height="96" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="tortuga" x="305" y="571" scale="0.6606162" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="BackButton" x="1311" y="149" scale="0.5977019" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="tortuga" x="299" y="549" scale="0.3" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1271" y="134" scale="0.5272071" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="acompañante" x="1357" y="1226" scale="0.9827539" orientation="0" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="acompañante" x="1357" y="1226" scale="1" orientation="0" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="EscenaCangrejo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -200,19 +229,43 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1204" y="15" width="223" height="106" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="cangrejo" x="751" y="803" scale="0.716969" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="BackButton" x="1257" y="235" scale="1" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="cangrejo" x="853" y="965" scale="1.5" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1309" y="153" scale="0.6073092" layer="0" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="acompañante" x="1362" y="1162" scale="0.721825" orientation="0" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="acompañante" x="1368" y="1293" scale="1" orientation="0" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4121169462935, -3.69086718557812)" zoom="16" start="no">
+  <scene id="EscenaFinal" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/intro.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <atrezzo>
+      <atrezzo-ref idTarget="animal1" x="208" y="397" scale="0.409518" layer="2" />
+      <atrezzo-ref idTarget="animal2" x="509" y="83" scale="0.1" layer="3" />
+      <atrezzo-ref idTarget="animal3" x="116" y="218" scale="0.05" layer="4" />
+      <atrezzo-ref idTarget="animal4" x="159" y="393" scale="0.1" layer="5" />
+      <atrezzo-ref idTarget="animal5" x="356" y="445" scale="0.3940645" layer="6" />
+      <atrezzo-ref idTarget="enhorabuena" x="286" y="132" scale="0.36" layer="0" />
+      <atrezzo-ref idTarget="tipo" x="490" y="646" scale="0.58" layer="1" />
+    </atrezzo>
+  </scene>
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4110264219174, -3.69070613385692)" zoom="18" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
-        <param name="Position">(735.4, 1086.5)</param>
+        <param name="Position">(710.8, 1079.4)</param>
         <param name="Rotation">0</param>
       </ext-elem-ref>
     </map-element>
@@ -221,17 +274,17 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4119491577148, -3.68988537788391)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">20</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Almez" layer="0" scale="0.0769624" orientation="0">
+    <map-element targetId="Almez" layer="0" scale="0.03" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4112701416016, -3.69181656837463)</param>
+        <param name="Position">(40.4112739562988, -3.691819190979)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">20</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -243,7 +296,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4118003845215, -3.69162893295288)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -255,7 +308,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4117813110352, -3.69065260887146)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -267,7 +320,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4104118347168, -3.69144105911255)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -279,7 +332,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4116821289063, -3.69019651412964)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -291,7 +344,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4107284545898, -3.69157934188843)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -303,7 +356,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.411247253418, -3.68959450721741)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">20</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -315,7 +368,7 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4116363525391, -3.69118762016296)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">20</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -327,7 +380,27 @@
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4105262756348, -3.69041514396667)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">20</param>
+        <param name="InteractionRange">30</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="tortugaMapa" layer="0" scale="0.1" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.411247253418, -3.69093942642212)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">30</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="cangrejoMapa" layer="0" scale="0.05" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4112205505371, -3.68989086151123)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">30</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
       </ext-elem-ref>
@@ -336,6 +409,104 @@
   <atrezzoobject id="playBtton">
     <resources name="No name">
       <asset type="image" uri="assets/image/play.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animal1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/MapachesSegundaFilaDer.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animal2">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cotorra.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animal3">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/vison.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animal4">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/galapago.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animal5">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/FondoCangrejos_FondoEstanque.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="tipo">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/companion.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="enhorabuena">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/enhorabuena.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -638,7 +809,12 @@
       <condition />
       <speak-char idTarget="acompañante">¡Y de paso has aprendido algunas cosas interesantes sobre el jardín y sus plantas!</speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="EscenaFinal" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <object id="Agave" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -683,8 +859,8 @@
   </object>
   <object id="Almez" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Almez.png" />
-      <asset type="icon" uri="assets/icon/Almez.png" />
+      <asset type="image" uri="assets/image/tablas _almez.png" />
+      <asset type="icon" uri="assets/icon/palo_almez.png" />
     </resources>
     <description>
       <name>
@@ -726,7 +902,7 @@
   <object id="Red" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/red.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="icon" uri="assets/icon/red.png" />
     </resources>
     <description>
       <name>
@@ -791,6 +967,48 @@
           <remove-element idTarget="Vison" />
           <condition />
           <remove-element idTarget="VisonMapa" />
+          <condition />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Final" />
+          <condition>
+            <equals var="animalesAtrapados" value="5" />
+          </condition>
+        </effect>
+      </use-with>
+      <use-with idTarget="tortuga" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="TortugaCalmada" />
+        </condition>
+        <effect>
+          <increment var="animalesAtrapados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">¡Genial! Otro capturado.</speak-char>
+          <condition />
+          <remove-element idTarget="tortuga" />
+          <condition />
+          <remove-element idTarget="tortugaMapa" />
+          <condition />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Final" />
+          <condition>
+            <equals var="animalesAtrapados" value="5" />
+          </condition>
+        </effect>
+      </use-with>
+      <use-with idTarget="cangrejo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="CangrejosTomados" />
+        </condition>
+        <effect>
+          <increment var="animalesAtrapados" value="1" />
+          <condition />
+          <speak-char idTarget="acompañante">¡Genial! Otro capturado.</speak-char>
+          <condition />
+          <remove-element idTarget="cangrejo" />
+          <condition />
+          <remove-element idTarget="cangrejoMapa" />
           <condition />
           <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
           <condition />
@@ -885,7 +1103,7 @@
   <object id="Olmo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/olmo.png" />
-      <asset type="icon" uri="assets/icon/JugoDeOlmo.png" />
+      <asset type="icon" uri="assets/icon/corteza.png" />
     </resources>
     <description>
       <name>
@@ -950,8 +1168,7 @@
           <condition />
           <activate flag="TortugaCalmada" />
           <condition />
-          <speak-char idTarget="acompañante">
-          </speak-char>
+          <speak-char idTarget="acompañante">Parece que le gustan. Aprovecha mientras está entretenida y atrápala con la red.</speak-char>
           <condition />
         </effect>
       </use-with>
@@ -991,14 +1208,13 @@
           <condition />
           <activate flag="CangrejosTomados" />
           <condition />
-          <speak-char idTarget="acompañante">
-          </speak-char>
+          <speak-char idTarget="acompañante">Genial, así podremos llevarlos sin miedo a que nos pellizquen los dedos. Usa la red ahora para atraparlos.</speak-char>
           <condition />
         </effect>
       </use-with>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
-          <trigger-conversation idTarget="Inicio" />
+          <trigger-conversation idTarget="CedroExaminar" />
           <condition />
         </effect>
       </examine>
@@ -1160,7 +1376,7 @@
   </object>
   <object id="tortugaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/galapago.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1237,13 +1453,5 @@
       <detailed>
       </detailed>
     </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
   </object>
 </eAdventure>
