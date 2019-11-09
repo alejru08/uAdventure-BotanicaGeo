@@ -180,7 +180,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4105770818031, -3.69083499907009)" zoom="18" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4116942018589, -3.69042193888183)" zoom="19" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -189,7 +189,9 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Agave" layer="0" scale="0.03502054" orientation="0">
-      <condition />
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4119491577148, -3.68988537788391)</param>
         <param name="Rotation">0</param>
@@ -199,7 +201,9 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Almez" layer="0" scale="0.0769624" orientation="0">
-      <condition />
+      <condition>
+        <active flag="TutorialTerminado" />
+      </condition>
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4112701416016, -3.69181656837463)</param>
         <param name="Rotation">0</param>
