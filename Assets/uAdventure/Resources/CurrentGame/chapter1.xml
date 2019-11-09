@@ -74,6 +74,15 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
+          <equals var="componentesRedDados" value="2" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="FabricarRed" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
           <inactive flag="TutorialTerminado" />
         </condition>
         <effect>
@@ -124,9 +133,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Vison" x="663" y="703" scale="0.2940905" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Vison" x="663" y="703" scale="0.2940905" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="BackButton" x="1409" y="146" scale="0.6035272" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="acompañante" x="1341" y="1157" scale="0.9569296" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="EscenaDeMapaches" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -138,9 +150,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Mapaches" x="705" y="821" scale="0.8333333" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Mapaches" x="705" y="821" scale="0.8333333" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="BackButton" x="1329" y="152" scale="0.608752" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="acompañante" x="1384" y="1282" scale="1.09916" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="EscenaCotorras" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -152,9 +167,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Cotorras" x="677" y="652" scale="0.8333333" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="BackButton" x="1322" y="151" scale="0.6100508" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="acompañante" x="1431" y="1123" scale="0.9510094" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="EscenaTortuga" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -169,6 +187,9 @@
       <object-ref idTarget="tortuga" x="305" y="571" scale="0.6606162" layer="1" hasInfluenceArea="no" />
       <object-ref idTarget="BackButton" x="1311" y="149" scale="0.5977019" layer="0" hasInfluenceArea="no" />
     </objects>
+    <characters>
+      <character-ref idTarget="acompañante" x="1357" y="1226" scale="0.9827539" orientation="0" layer="2" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="EscenaCangrejo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -179,8 +200,15 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="cangrejo" x="751" y="803" scale="0.716969" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BackButton" x="1257" y="235" scale="1" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="acompañante" x="1362" y="1162" scale="0.721825" orientation="0" layer="2" hasInfluenceArea="no" />
+    </characters>
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4121169462935, -3.69086718557812)" zoom="18" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4121169462935, -3.69086718557812)" zoom="16" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -383,11 +411,34 @@
   </graph-conversation>
   <graph-conversation id="Mision1-Red">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">¿Ya lo tines todo? Genial</speak-char>
+      <condition>
+        <active flag="Agave" />
+        <active flag="Alemez" />
+      </condition>
+      <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos agave, la otra parte de la red.</speak-char>
+      <condition>
+        <active flag="Alemez" />
+        <inactive flag="Agave" />
+      </condition>
+      <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos almez,la otra parte de la red.</speak-char>
+      <condition>
+        <active flag="Agave" />
+        <inactive flag="Alemez" />
+      </condition>
       <speak-char idTarget="acompañante">Para fabricar tu red necesitarás madera de almez y fibras de agave.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Recuerdo ver un almez cerca de la entrada oeste.</speak-char>
-      <condition />
+      <condition>
+        <inactive flag="Alemez" />
+      </condition>
       <speak-char idTarget="acompañante">El agave debería estar en la esquina noreste del jardín.</speak-char>
+      <condition>
+        <inactive flag="Agave" />
+      </condition>
+      <speak-char idTarget="acompañante">Si necesita ayuda puedes consultarme cuando necesites</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Y si ya tienes los dos materiales solo tienes que darmelos</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -429,13 +480,13 @@
   </graph-conversation>
   <graph-conversation id="AgaveExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Este es un agave o maguey</speak-player>
+      <speak-char idTarget="acompañante">Este es un agave o maguey</speak-char>
       <condition />
-      <speak-player>Es nativa de México, centroamérica y el caribe, pero se ha introducido a otras regiones.</speak-player>
+      <speak-char idTarget="acompañante">Es nativa de México, centroamérica y el caribe, pero se ha introducido a otras regiones.</speak-char>
       <condition />
-      <speak-player>Su principal uso fue y es la creación del mezcal. Uno de los más famosos es el mezcal de Tequila.</speak-player>
+      <speak-char idTarget="acompañante">Su principal uso fue y es la creación del mezcal. Uno de los más famosos es el mezcal de Tequila.</speak-char>
       <condition />
-      <speak-player>También se usa su fibra para hacer cuerdas, por lo que nos vendrá bien a la hora de hacer la red.</speak-player>
+      <speak-char idTarget="acompañante">También se usa su fibra para hacer cuerdas, por lo que nos vendrá bien a la hora de hacer la red.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -451,26 +502,26 @@
   </graph-conversation>
   <graph-conversation id="AlmezExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Esta es una rama de almez, un árbol caducifolio.</speak-player>
+      <speak-char idTarget="acompañante">Esta es una rama de almez, un árbol caducifolio.</speak-char>
       <condition />
-      <speak-player>Tiene muchas utilidades, y se ha llevado de Europa a otras partes del mundo.</speak-player>
+      <speak-char idTarget="acompañante">Tiene muchas utilidades, y se ha llevado de Europa a otras partes del mundo.</speak-char>
       <condition />
-      <speak-player>Las ramas se han utilizado desde tiempos antiguos para horquillas.</speak-player>
+      <speak-char idTarget="acompañante">Las ramas se han utilizado desde tiempos antiguos para horquillas.</speak-char>
       <condition />
-      <speak-player>No haremos una horquilla, pero nos servirá para hacer el mango de la red</speak-player>
+      <speak-char idTarget="acompañante">No haremos una horquilla, pero nos servirá para hacer el mango de la red</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="CedroExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Esto es un cedro del Himalaya. Es una conífera.</speak-player>
+      <speak-char idTarget="acompañante">Esto es un cedro del Himalaya. Es una conífera.</speak-char>
       <condition />
-      <speak-player>Se usa como un aromático, y para espantar a los bichos del ganado.</speak-player>
+      <speak-char idTarget="acompañante">Se usa como un aromático, y para espantar a los bichos del ganado.</speak-char>
       <condition />
-      <speak-player>También tiene una resistencia a la putrefacción que causa el agua.</speak-player>
+      <speak-char idTarget="acompañante">También tiene una resistencia a la putrefacción que causa el agua.</speak-char>
       <condition />
-      <speak-player>Lo puedes encontrar como perfumes, aerosoles, insecticidas y ceras</speak-player>
+      <speak-char idTarget="acompañante">Lo puedes encontrar como perfumes, aerosoles, insecticidas y ceras</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -479,24 +530,24 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="acompañante">Es un laurel, sus hojas son famosas como condimento en la cocina mediterránea.</speak-char>
       <condition />
-      <speak-player>Lo que mucha gente no sabe es que antigüamente se usaban en medicina.</speak-player>
+      <speak-char idTarget="acompañante">Lo que mucha gente no sabe es que antigüamente se usaban en medicina.</speak-char>
       <condition />
-      <speak-player>Puedes usarla para tratar un dolor estomacal, o hacer un aceite para las articulaciones.</speak-player>
+      <speak-char idTarget="acompañante">Puedes usarla para tratar un dolor estomacal, o hacer un aceite para las articulaciones.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="UvasExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Esta es una vid de uvas.</speak-player>
+      <speak-char idTarget="acompañante">Esta es una vid de uvas.</speak-char>
       <condition />
-      <speak-player>Con ellas se pueden producir agraz, vino y vinagre, entre otros, pero saben dulces si te las comes frescas.</speak-player>
+      <speak-char idTarget="acompañante">Con ellas se pueden producir agraz, vino y vinagre, entre otros, pero saben dulces si te las comes frescas.</speak-char>
       <condition />
-      <speak-player>Es originaria de Europa y Asia central, pero se ha introducido en otros lados del mundo también.</speak-player>
+      <speak-char idTarget="acompañante">Es originaria de Europa y Asia central, pero se ha introducido en otros lados del mundo también.</speak-char>
       <condition />
-      <speak-player>Es parte de la dieta de muchos animales, así como de muchos humanos. Parece que tenemos doce.</speak-player>
+      <speak-char idTarget="acompañante">Es parte de la dieta de muchos animales, así como de muchos humanos. Parece que tenemos doce.</speak-char>
       <condition />
-      <speak-player>¡Pide un deseo por cada uva!</speak-player>
+      <speak-char idTarget="acompañante">¡Pide un deseo por cada uva!</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -514,15 +565,15 @@
   </graph-conversation>
   <graph-conversation id="cangrejoExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="69">
-      <speak-player>Estos son cangrejos americanos. Como verás, son de América, y viven en los ríos.</speak-player>
+      <speak-char idTarget="acompañante">Estos son cangrejos americanos. Como verás, son de América, y viven en los ríos.</speak-char>
       <condition />
-      <speak-player>Es muy resistente y adaptable a las adversidades, y se ha propagado por parte del mundo, siendo comprado como mascotas, o traido para ser criado.</speak-player>
+      <speak-char idTarget="acompañante">Es muy resistente y adaptable a las adversidades, y se ha propagado por parte del mundo, siendo comprado como mascotas, o traido para ser criado.</speak-char>
       <condition />
-      <speak-player>Lamentablemente trae consigo muchos patógenos que dañan a la fauna local, y destruyen los ríos con sus madrigeras.</speak-player>
+      <speak-char idTarget="acompañante">Lamentablemente trae consigo muchos patógenos que dañan a la fauna local, y destruyen los ríos con sus madrigeras.</speak-char>
       <condition />
-      <speak-player>Quizás podríamos hacerles un recipiente con agua para llevarlos a otro lugar.</speak-player>
+      <speak-char idTarget="acompañante">Quizás podríamos hacerles un recipiente con agua para llevarlos a otro lugar.</speak-char>
       <condition />
-      <speak-player>Necesitaremos madera que no le afecte el agua para poder hacer el recipiente.</speak-player>
+      <speak-char idTarget="acompañante">Necesitaremos madera que no le afecte el agua para poder hacer el recipiente.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -555,13 +606,13 @@
   </graph-conversation>
   <graph-conversation id="tortugaExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
-      <speak-player>Esta parecer ser una galápago de Florida. Mírale las orejas rojas.</speak-player>
+      <speak-char idTarget="acompañante">Esta parecer ser una galápago de Florida. Mírale las orejas rojas.</speak-char>
       <condition />
-      <speak-player>Estas tortugas son originarias de América, pero se han esparcido por todo el mundo como mascotas y regalos de cumpleaños.</speak-player>
+      <speak-char idTarget="acompañante">Estas tortugas son originarias de América, pero se han esparcido por todo el mundo como mascotas y regalos de cumpleaños.</speak-char>
       <condition />
-      <speak-player>Lamentablemente, así se han convertido en una especie invasora, al ser liberadas o soltadas en la naturaleza.</speak-player>
+      <speak-char idTarget="acompañante">Lamentablemente, así se han convertido en una especie invasora, al ser liberadas o soltadas en la naturaleza.</speak-char>
       <condition />
-      <speak-player>Ésta parece estar a su rollo. Puede que te la ganes si le das alguna fruta.</speak-player>
+      <speak-char idTarget="acompañante">Ésta parece estar a su rollo. Puede que te la ganes si le das alguna fruta.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -610,6 +661,8 @@
           <condition />
           <generate-object idTarget="Agave" />
           <condition />
+          <activate flag="Agave" />
+          <condition />
         </effect>
       </grab>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
@@ -622,14 +675,6 @@
         <effect>
           <increment var="componentesRedDados" value="1" />
           <condition />
-          <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos la otra parte de la red.</speak-char>
-          <condition>
-            <equals var="componentesRedDados" value="1" />
-          </condition>
-          <trigger-conversation idTarget="FabricarRed" />
-          <condition>
-            <equals var="componentesRedDados" value="2" />
-          </condition>
           <consume-object idTarget="Agave" />
           <condition />
         </effect>
@@ -656,6 +701,8 @@
           <condition />
           <generate-object idTarget="Almez" />
           <condition />
+          <activate flag="Alemez" />
+          <condition />
         </effect>
       </grab>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
@@ -670,14 +717,6 @@
         <effect>
           <increment var="componentesRedDados" value="1" />
           <condition />
-          <speak-char idTarget="acompañante">Muy bien, ahora solo necesitamos la otra parte de la red.</speak-char>
-          <condition>
-            <equals var="componentesRedDados" value="1" />
-          </condition>
-          <trigger-conversation idTarget="FabricarRed" />
-          <condition>
-            <equals var="componentesRedDados" value="2" />
-          </condition>
           <consume-object idTarget="Almez" />
           <condition />
         </effect>
@@ -779,9 +818,9 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <remove-element idTarget="Almez" />
+          <remove-element idTarget="Aligustre" />
           <condition />
-          <generate-object idTarget="Almez" />
+          <generate-object idTarget="Aligustre" />
           <condition />
         </effect>
       </grab>
@@ -918,7 +957,7 @@
       </use-with>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
-          <trigger-conversation idTarget="Inicio" />
+          <trigger-conversation idTarget="UvasExaminar" />
           <condition />
         </effect>
       </examine>
@@ -940,11 +979,9 @@
     <actions>
       <grab needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <speak-char idTarget="acompañante">La madera de almez es dura y se ha usado durante generaciones para hacer erramientas de labranza. También es buena para hacer carbón.</speak-char>
+          <remove-element idTarget="CedroDelHimalaya" />
           <condition />
-          <remove-element idTarget="Almez" />
-          <condition />
-          <generate-object idTarget="Almez" />
+          <generate-object idTarget="CedroDelHimalaya" />
           <condition />
         </effect>
       </grab>
@@ -1203,7 +1240,7 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-last-scene />
+          <trigger-scene idTarget="main" x="290" y="300" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
       </use>
