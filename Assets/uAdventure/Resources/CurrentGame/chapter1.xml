@@ -180,7 +180,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4116942018589, -3.69042193888183)" zoom="19" start="no">
+  <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4121169462935, -3.69086718557812)" zoom="18" start="no">
     <map-element targetId="acompañante" layer="0" scale="1.168024" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -189,9 +189,7 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Agave" layer="0" scale="0.03502054" orientation="0">
-      <condition>
-        <active flag="TutorialTerminado" />
-      </condition>
+      <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4119491577148, -3.68988537788391)</param>
         <param name="Rotation">0</param>
@@ -201,9 +199,7 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Almez" layer="0" scale="0.0769624" orientation="0">
-      <condition>
-        <active flag="TutorialTerminado" />
-      </condition>
+      <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4112701416016, -3.69181656837463)</param>
         <param name="Rotation">0</param>
@@ -490,17 +486,6 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="OlmoExaminar">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Es un olmo, un árbol de hoja caduca que se extiende por todo el hemisferio norte.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Se puede usar su corteza para fabricar una tintura contra las infecciones de bacterias.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Aun se utiliza cuando las bcterias son resistentes a los antibióticos.</speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="UvasExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Esta es una vid de uvas.</speak-player>
@@ -512,6 +497,17 @@
       <speak-player>Es parte de la dieta de muchos animales, así como de muchos humanos. Parece que tenemos doce.</speak-player>
       <condition />
       <speak-player>¡Pide un deseo por cada uva!</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="OlmoExaminar">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="acompañante">Es un olmo, un árbol de hoja caduca que se extiende por todo el hemisferio norte.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Se puede usar su corteza para fabricar una tintura contra las infecciones de bacterias.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Aun se utiliza cuando las bcterias son resistentes a los antibióticos.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -531,17 +527,6 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="CotorrasExaminar">
-    <dialogue-node nodeindex="0" editor-x="135" editor-y="77">
-      <speak-char idTarget="acompañante">Una bandada de cotorras, posiblemente argentinas por el tamaño del pico.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
-      <condition />
-      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="MapacheExaminar">
     <dialogue-node nodeindex="0" editor-x="195" editor-y="59">
       <speak-char idTarget="acompañante">Estos son mapaches, una especie originaria de América.</speak-char>
@@ -553,6 +538,17 @@
       <speak-char idTarget="acompañante">Estos mapaches parecen haberse atiborrado a comida de la huerta y ahora están sufriendo un empacho.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">El laurel sirve como medicina estomacal, tal vez si les damos un poco estén mas dispuestos a cooperar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CotorrasExaminar">
+    <dialogue-node nodeindex="0" editor-x="135" editor-y="77">
+      <speak-char idTarget="acompañante">Una bandada de cotorras, posiblemente argentinas por el tamaño del pico.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
+      <condition />
+      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
