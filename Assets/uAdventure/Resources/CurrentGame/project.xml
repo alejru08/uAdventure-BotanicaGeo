@@ -3,16 +3,18 @@
 <comment> Project Configuration </comment>
 <entry key="Chapter0.Estanque.X">292</entry>
 <entry key="Chapter0.Estanque.Y">22</entry>
-<entry key="Chapter0.EscenaDelVison.X">443</entry>
-<entry key="Chapter0.EscenaDelVison.Y">11</entry>
-<entry key="Chapter0.EscenaDeMapaches.X">22</entry>
-<entry key="Chapter0.EscenaDeMapaches.Y">236</entry>
-<entry key="Chapter0.EscenaCotorras.X">452</entry>
-<entry key="Chapter0.EscenaCotorras.Y">247</entry>
-<entry key="Chapter0.SceneId.X">160</entry>
-<entry key="Chapter0.SceneId.Y">38</entry>
-<entry key="Chapter0.EscenaTortuga.X">-268</entry>
-<entry key="Chapter0.EscenaTortuga.Y">2</entry>
-<entry key="Chapter0.EscenaCangrejo.X">-264</entry>
-<entry key="Chapter0.EscenaCangrejo.Y">309</entry>
+<entry key="Chapter0.EscenaDelVison.X">708</entry>
+<entry key="Chapter0.EscenaDelVison.Y">8</entry>
+<entry key="Chapter0.EscenaDeMapaches.X">267</entry>
+<entry key="Chapter0.EscenaDeMapaches.Y">426</entry>
+<entry key="Chapter0.EscenaCotorras.X">697</entry>
+<entry key="Chapter0.EscenaCotorras.Y">421</entry>
+<entry key="Chapter0.SceneId.X">229</entry>
+<entry key="Chapter0.SceneId.Y">106</entry>
+<entry key="Chapter0.EscenaTortuga.X">-204</entry>
+<entry key="Chapter0.EscenaTortuga.Y">192</entry>
+<entry key="Chapter0.EscenaCangrejo.X">-211</entry>
+<entry key="Chapter0.EscenaCangrejo.Y">398</entry>
+<entry key="Chapter0.EscenaFinal.X">406</entry>
+<entry key="Chapter0.EscenaFinal.Y">4</entry>
 </properties>

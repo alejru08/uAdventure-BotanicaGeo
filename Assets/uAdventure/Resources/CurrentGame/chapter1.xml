@@ -110,17 +110,32 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="SceneId" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="ini" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/intro.jpg" />
+      <asset type="background" uri="assets/background/fondo ini.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="184" y="293" width="208" height="58" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="444" y="180" width="783" height="590" hasInfluenceArea="no" idTarget="SceneId" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="SceneId" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Acceso-principal.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-9" y="-1" width="629" height="176" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <trigger-conversation idTarget="Inicio" />
@@ -129,7 +144,7 @@
       </exit>
     </exits>
     <atrezzo>
-      <atrezzo-ref idTarget="playBtton" x="289" y="354" scale="0.2533795" layer="0" />
+      <atrezzo-ref idTarget="playBtton" x="308" y="168" scale="0.6746653" layer="0" />
     </atrezzo>
   </scene>
   <scene id="EscenaDelVison" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -142,7 +157,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1084" y="38" width="186" height="88" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1072" y="18" width="206" height="132" hasInfluenceArea="no" idTarget="main" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -253,9 +268,9 @@
     <default-initial-position x="400" y="450" />
     <atrezzo>
       <atrezzo-ref idTarget="animal1" x="208" y="397" scale="0.409518" layer="2" />
-      <atrezzo-ref idTarget="animal2" x="509" y="83" scale="0.1" layer="3" />
-      <atrezzo-ref idTarget="animal3" x="116" y="218" scale="0.05" layer="4" />
-      <atrezzo-ref idTarget="animal4" x="159" y="393" scale="0.1" layer="5" />
+      <atrezzo-ref idTarget="animal2" x="365" y="62" scale="0.1" layer="3" />
+      <atrezzo-ref idTarget="animal3" x="116" y="219" scale="0.04841233" layer="4" />
+      <atrezzo-ref idTarget="animal4" x="152" y="399" scale="0.1" layer="5" />
       <atrezzo-ref idTarget="animal5" x="356" y="445" scale="0.3940645" layer="6" />
       <atrezzo-ref idTarget="enhorabuena" x="286" y="132" scale="0.36" layer="0" />
       <atrezzo-ref idTarget="tipo" x="490" y="646" scale="0.58" layer="1" />
@@ -519,41 +534,41 @@
     </description>
   </atrezzoobject>
   <graph-conversation id="Inicio">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Buenas compañero</speak-char>
+    <dialogue-node nodeindex="0" editor-x="22" editor-y="30">
+      <speak-char idTarget="acompañante">Hola compañero</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Te agradezco mucho que hayas podido venir a ayudarnos</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">El jardín botanico esta plagado de especies invasoras que lo estan destrozando</speak-char>
+      <speak-char idTarget="acompañante">El jardín botánico está plagado de especies invasoras que lo están destrozando</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Tenemos que capturarlos</speak-char>
+      <speak-char idTarget="acompañante">Tenemos que capturarlas</speak-char>
       <condition />
-      <speak-player>Vale, entendido</speak-player>
+      <speak-player>#O Vale, entendido</speak-player>
       <condition />
       <speak-char idTarget="acompañante">Lo malo es que nos hemos quedado sin materiales y herramientas...</speak-char>
       <condition />
-      <speak-player>Podemos usar los restos de las plantas que hayan dejado por ahi los animales</speak-player>
+      <speak-player>#O Podemos usar los restos de las plantas que hayan dejado por ahí los animales</speak-player>
       <condition />
-      <speak-char idTarget="acompañante">Hum...me da que no tenemos otra opcion</speak-char>
+      <speak-char idTarget="acompañante">Hum...me da que no tenemos otra opción</speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="319" editor-y="30">
+    <dialogue-node nodeindex="1" editor-x="350" editor-y="30">
       <speak-char idTarget="acompañante">Podemos buscar frutos de las plantas para alimentar a los animales y que nos dejen acercarnos</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Tambien podemos usar algunas plantas que desprendan aromas distintos que puede tranquilizar al animal</speak-char>
+      <speak-char idTarget="acompañante">También se pueden utilizar plantas que desprendan aromas para tranquilizar al animal</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Y si necesitamos alguna herramienta....seguro que hay restos de madera, ramas y demás que podremos usar</speak-char>
+      <speak-char idTarget="acompañante">Y si necesitamos alguna herramienta....seguro que hay restos de madera, ramas y demás, que podremos usar</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Empecemos por fabricarnos una red con la que atraparlos sin hacerles daño.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Necesitaremos una madera resistente para el mango</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Hay un almez cerca de la entrada oeste que irá perfecto.</speak-char>
+      <speak-char idTarget="acompañante">Hay un Almez cerca de la entrada oeste que irá perfecto.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">También vamos a necesitar fibras para la propia red.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Creo haber visto un agave en la esquina noreste.</speak-char>
+      <speak-char idTarget="acompañante">Creo haber visto un Agave en la esquina noreste.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Consigue esas plantas y podremos empezar.</speak-char>
       <condition />
@@ -561,7 +576,7 @@
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <option-node nodeindex="2" preListening="yes" editor-x="722" editor-y="48" x="722" y="48">
+    <option-node nodeindex="2" preListening="yes" editor-x="1014" editor-y="467" x="1014" y="467">
       <speak-player>Alto y claro</speak-player>
       <condition />
       <child nodeindex="3" />
@@ -569,7 +584,7 @@
       <condition />
       <child nodeindex="1" />
     </option-node>
-    <dialogue-node nodeindex="3" editor-x="1043" editor-y="76">
+    <dialogue-node nodeindex="3" editor-x="1138" editor-y="61">
       <speak-char idTarget="acompañante">¡Manos a la obra!</speak-char>
       <condition />
       <end-conversation>
@@ -620,9 +635,9 @@
       <condition />
       <speak-char idTarget="acompañante">Aquí tienes tu red. Te la pongo en la mochila. </speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Ahora deberíamos ir a buscar a esos animales invasores.</speak-char>
+      <speak-char idTarget="acompañante">Ahora deberíamos ir a buscar a esas especies invasoras.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Segun tengo entendido hay cinco y cada uno requerirá de un trato diferente.</speak-char>
+      <speak-char idTarget="acompañante">Según tengo entendido hay cinco y cada una requerirá un trato diferente.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Seguro que si buscamos por el botánico encotramos la forma de atraparlos.</speak-char>
       <condition />
@@ -651,7 +666,7 @@
   </graph-conversation>
   <graph-conversation id="AgaveExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Este es un agave o maguey</speak-char>
+      <speak-char idTarget="acompañante">Este es un Agave o Maguey</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Es nativa de México, centroamérica y el caribe, pero se ha introducido a otras regiones.</speak-char>
       <condition />
@@ -664,22 +679,22 @@
   </graph-conversation>
   <graph-conversation id="AligustreExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="49">
-      <speak-char idTarget="acompañante">Eso es aligustre, una planta cuyos frutos son muy apreciados por las aves.</speak-char>
+      <speak-char idTarget="acompañante">Eso es Aligustre, una planta cuyos frutos son muy apreciados por las aves.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Pero no intentes probarlas, para nosotros son bastante venenosas.</speak-char>
+      <speak-char idTarget="acompañante">Pero no intentes probarlas, para nosotros son bastante venenosos.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="AlmezExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Esta es una rama de almez, un árbol caducifolio.</speak-char>
+      <speak-char idTarget="acompañante">Esta es una rama de Almez, un árbol caducifolio.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Tiene muchas utilidades, y se ha llevado de Europa a otras partes del mundo.</speak-char>
+      <speak-char idTarget="acompañante">Tiene muchas utilidades, se ha llevado de Europa a otras partes del mundo.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Las ramas se han utilizado desde tiempos antiguos para horquillas.</speak-char>
+      <speak-char idTarget="acompañante">Las ramas se han utilizado desde tiempos antiguos para construir horquillas de labranza.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">No haremos una horquilla, pero nos servirá para hacer el mango de la red</speak-char>
+      <speak-char idTarget="acompañante">No haremos una horquilla, pero nos servirá para el mango de la red</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -688,11 +703,11 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="acompañante">Esto es un cedro del Himalaya. Es una conífera.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Se usa como un aromático, y para espantar a los bichos del ganado.</speak-char>
+      <speak-char idTarget="acompañante">Se usa como un aromático, y para espantar a los insectos del ganado.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">También tiene una resistencia a la putrefacción que causa el agua.</speak-char>
+      <speak-char idTarget="acompañante">Tiene una gran resistencia a la putrefacción que causa el agua.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Lo puedes encontrar como perfumes, aerosoles, insecticidas y ceras</speak-char>
+      <speak-char idTarget="acompañante">Lo puedes encontrar como perfumes, aerosoles, insecticidas y ceras.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -701,9 +716,9 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="acompañante">Es un laurel, sus hojas son famosas como condimento en la cocina mediterránea.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Lo que mucha gente no sabe es que antigüamente se usaban en medicina.</speak-char>
+      <speak-char idTarget="acompañante">Lo que mucha gente no sabe es que antigüamente se usaba en medicina.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Puedes usarla para tratar un dolor estomacal, o hacer un aceite para las articulaciones.</speak-char>
+      <speak-char idTarget="acompañante">Puedes usarlo para tratar el dolor estomacal y para hacer un aceite para las articulaciones.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -714,7 +729,7 @@
       <condition />
       <speak-char idTarget="acompañante">Con ellas se pueden producir agraz, vino y vinagre, entre otros, pero saben dulces si te las comes frescas.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Es originaria de Europa y Asia central, pero se ha introducido en otros lados del mundo también.</speak-char>
+      <speak-char idTarget="acompañante">Es originaria de Europa y Asia central, aunque se ha introducido en otros lados del mundo también.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Es parte de la dieta de muchos animales, así como de muchos humanos. Parece que tenemos doce.</speak-char>
       <condition />
@@ -725,11 +740,11 @@
   </graph-conversation>
   <graph-conversation id="OlmoExaminar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="acompañante">Es un olmo, un árbol de hoja caduca que se extiende por todo el hemisferio norte.</speak-char>
+      <speak-char idTarget="acompañante">Es un Olmo, un árbol de hoja caduca que se extiende por todo el hemisferio norte.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Se puede usar su corteza para fabricar una tintura contra las infecciones de bacterias.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Aun se utiliza cuando las bcterias son resistentes a los antibióticos.</speak-char>
+      <speak-char idTarget="acompañante">Aún se utiliza cuando las bacterias son resistentes a los antibióticos.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -738,7 +753,7 @@
     <dialogue-node nodeindex="0" editor-x="190" editor-y="69">
       <speak-char idTarget="acompañante">Estos son cangrejos americanos. Como verás, son de América, y viven en los ríos.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Es muy resistente y adaptable a las adversidades, y se ha propagado por parte del mundo, siendo comprado como mascotas, o traido para ser criado.</speak-char>
+      <speak-char idTarget="acompañante">Es muy resistente y adaptable a las adversidades, se ha propagado por parte del mundo, siendo comprado como mascotas, o traído para ser criado.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Lamentablemente trae consigo muchos patógenos que dañan a la fauna local, y destruyen los ríos con sus madrigeras.</speak-char>
       <condition />
@@ -750,10 +765,10 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="MapacheExaminar">
-    <dialogue-node nodeindex="0" editor-x="195" editor-y="59">
-      <speak-char idTarget="acompañante">Estos son mapaches, una especie originaria de América.</speak-char>
+    <dialogue-node nodeindex="0" editor-x="23" editor-y="24">
+      <speak-char idTarget="acompañante">Estos son mapaches, un animal originario de América.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Es una especie invasora en España. Empezó a ser traida como mascotas y han pasado a ser un riesgo para Europa.</speak-char>
+      <speak-char idTarget="acompañante">Es una especie invasora en España. Empezó a ser traída como mascotas y han pasado a ser un riesgo en toda Europa.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Debemos tener cuidado, pues pueden traer patógenos que son nocivos para el ecosistema y los humanos</speak-char>
       <condition />
@@ -770,33 +785,33 @@
       <condition />
       <speak-char idTarget="acompañante">Ahí arriba es imposible que las alcancemos, tendremos que hacerlas bajar.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de aligustre le gustan a muchos pájaros.</speak-char>
+      <speak-char idTarget="acompañante">Podríamos usar comida para atraerlas, los frutos de Aligustre le gustan a muchos pájaros.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="tortugaExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
-      <speak-char idTarget="acompañante">Esta parecer ser una galápago de Florida. Mírale las orejas rojas.</speak-char>
+      <speak-char idTarget="acompañante">Esta parecer ser una galápago de Florida. Míra las orejas rojas.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Estas tortugas son originarias de América, pero se han esparcido por todo el mundo como mascotas y regalos de cumpleaños.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Lamentablemente, así se han convertido en una especie invasora, al ser liberadas o soltadas en la naturaleza.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Ésta parece estar a su rollo. Puede que te la ganes si le das alguna fruta.</speak-char>
+      <speak-char idTarget="acompañante">Ésta parece estar impasible. Quizás te la ganes si le das alguna fruta.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="VisonExaminar">
     <dialogue-node nodeindex="0" editor-x="190" editor-y="70">
-      <speak-char idTarget="acompañante">Es un visón, una especie invasora que proviene de América.</speak-char>
+      <speak-char idTarget="acompañante">Es un Visón, una especie invasora que proviene de América.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Presenta un peligro a las demás especies, pues es un voraz depredador.</speak-char>
       <condition />
       <speak-char idTarget="acompañante">Parece que está herido y por eso se muestra agresivo.</speak-char>
       <condition />
-      <speak-char idTarget="acompañante">Con la corteza de olmo se puede hacer una tintura que le curará la infección.</speak-char>
+      <speak-char idTarget="acompañante">Con la corteza de Olmo se puede hacer una tintura que le curará la infección.</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
