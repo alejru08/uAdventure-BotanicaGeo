@@ -9,7 +9,7 @@ namespace uAdventure.Runner
 {
     public class UIItem : UIRepresentable, Interactuable, IActionReceiver, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ITargetSelectedHandler
     {
-        private static readonly int[] restrictedActions = { Action.CUSTOM_INTERACT, Action.GIVE_TO, Action.USE_WITH, Action.EXAMINE };
+        private static readonly int[] restrictedActions = { Action.CUSTOM_INTERACT, Action.GIVE_TO, Action.USE_WITH, Action.EXAMINE, Action.USE, Action.CUSTOM };
 
         private bool isInteractive;
         private int targetActionType;
@@ -45,7 +45,7 @@ namespace uAdventure.Runner
                         }
                         break;
                     case Item.BehaviourType.NORMAL:
-                        var availableActions = Element.getActions().Valid(restrictedActions).ToList();
+                        var availableActions = Element.getActions().Valid(restrictedActions).Distinct().ToList();
 
                         ActionsUtil.AddExamineIfNotExists(Element, availableActions);
 
@@ -99,10 +99,12 @@ namespace uAdventure.Runner
 
         public void ActionSelected(Action action)
         {
+            InventoryManager.Instance.Opened = false;
             switch (action.getType())
             {
                 case Action.GIVE_TO:
                 case Action.USE_WITH:
+                case Action.CUSTOM_INTERACT:
                     // The texture that is already shown is either the icon or
                     if (!cursor)
                     {

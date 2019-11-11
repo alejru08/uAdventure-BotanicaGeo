@@ -93,7 +93,7 @@ namespace uAdventure.Analytics
             CheckTrackerFlush();
         }
 
-        public override void OnReset() { }
+        public override void Restart() { }
 
         public override void OnBeforeGameSave() { }
 
@@ -169,11 +169,13 @@ namespace uAdventure.Analytics
             TrackerAsset.Instance.StrictMode = false;
             TrackerAsset.Instance.Bridge = new UnityBridge();
             TrackerAsset.Instance.Settings = tracker_settings;
+            TrackerAsset.Instance.StrictMode = false;
 
-            /* TODO: login disabled
-             * if (!String.IsNullOrEmpty(username))
-                TrackerAsset.Instance.Login(username, password);
-            */
+            if (PlayerPrefs.HasKey("LimesurveyToken") && PlayerPrefs.GetString("LimesurveyToken") != "ADMIN")
+            {
+                TrackerAsset.Instance.Login(PlayerPrefs.GetString("LimesurveyToken"), PlayerPrefs.GetString("LimesurveyToken"));
+            }
+                
 
             TrackerAsset.Instance.Start();
             this.nextFlush = config.getFlushInterval();
