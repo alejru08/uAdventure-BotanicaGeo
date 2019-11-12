@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using uAdventure.Core;
+using UnityEngine.SceneManagement;
+using AssetPackage;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace uAdventure.Runner
 {
@@ -38,6 +42,10 @@ namespace uAdventure.Runner
         protected void Start()
         {
             guiprovider = new GUIProvider(Game.Instance.GameState.Data);
+            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                this.GetComponent<UnityEngine.UI.CanvasScaler>().referenceResolution = new Vector2(600, 400);
+            }
         }
 
         protected void Update()
@@ -85,16 +93,36 @@ namespace uAdventure.Runner
             lastText = text;
             ShowBubble(GenerateBubble(text, x, y, textColor, textBorderColor, backgroundColor, borderColor));
         }
+        public void Talk(ConversationLine line, string talkerName = null)
+        {
+            var resources = line.getResources().Checked().FirstOrDefault();
+            if (resources != null)
+            {
+                var image = resources.existAsset("image") ? Game.Instance.ResourceManager.getImage(resources.getAssetPath("image")) : null;
+                var audio = resources.existAsset("audio") ? Game.Instance.ResourceManager.getAudio(resources.getAssetPath("audio")) : null;
+                var tts = resources.existAsset("tts") ? resources.getAssetPath("tts") == "yes" : false;
+                Talk(line.getText(), image, audio, tts, talkerName);
+            }
+            else
+            {
+                Talk(line.getText(), null, null, false, talkerName);
+            }
+        }
 
         public void Talk(string text, string talkerName = null)
         {
+            Talk(text, null, null, false, talkerName);
+        }
+
+        public void Talk(string text, Texture2D image, AudioClip audio, bool synthetizeVoice, string talkerName = null)
+        {
             lastText = text;
             GameObject talkerObject = null;
+            BubbleData bubbleData;
             if (talkerName == null || talkerName == Player.IDENTIFIER)
             {
                 text = text.Replace("[]", "[" + Player.IDENTIFIER + "]");
                 NPC player = Game.Instance.GameState.Player;
-                BubbleData bubbleData;
 
                 if (Game.Instance.GameState.IsFirstPerson || PlayerMB.Instance == null)
                 {
@@ -109,6 +137,9 @@ namespace uAdventure.Runner
                     }
                     bubbleData = GenerateBubble(player, text, talkerObject);
                 }
+                bubbleData.Image = image;
+                bubbleData.TTS = synthetizeVoice;
+                bubbleData.Audio = audio;
 
                 ShowBubble(bubbleData);
             }
@@ -121,7 +152,11 @@ namespace uAdventure.Runner
                 }
 
                 NPC cha = Game.Instance.GameState.GetCharacter(talkerName);
-                ShowBubble(GenerateBubble(cha, text, talkerObject));
+                bubbleData = GenerateBubble(cha, text, talkerObject);
+                bubbleData.Image = image;
+                bubbleData.TTS = synthetizeVoice;
+                bubbleData.Audio = audio;
+                ShowBubble(bubbleData);
             }
             if (talkerObject)
             {
@@ -298,12 +333,63 @@ namespace uAdventure.Runner
 
         public void ResetAndExit()
         {
-            Game.Instance.Reset();
+            Game.Instance.Restart();
+        }
+        public void ClearData()
+        {
+            Game.Instance.ClearAndRestart();
         }
 
         public void ExitApplication()
         {
-            Application.Quit();
+            if (PlayerPrefs.HasKey("LimesurveyToken") && PlayerPrefs.GetString("LimesurveyToken") != "ADMIN" && PlayerPrefs.HasKey("LimesurveyPost"))
+            {
+                string path = Application.persistentDataPath;
+
+                if (!path.EndsWith("/"))
+                {
+                    path += "/";
+                }
+
+                Dictionary<string, string> headers = new Dictionary<string, string>();
+
+                Net net = new Net(this);
+
+                WWWForm data = new WWWForm();
+
+                TrackerAssetSettings trackersettings = (TrackerAssetSettings)TrackerAsset.Instance.Settings;
+                string backupfile = Application.persistentDataPath + System.IO.Path.DirectorySeparatorChar + trackersettings.BackupFile;
+
+                data.AddField("token", PlayerPrefs.GetString("LimesurveyToken"));
+                data.AddBinaryData("traces", System.Text.Encoding.UTF8.GetBytes(System.IO.File.ReadAllText(backupfile)));
+
+                //d//ata.headers.Remove ("Content-Type");// = "multipart/form-data";
+
+                net.POST(PlayerPrefs.GetString("LimesurveyHost") + "classes/collector", data, new SavedTracesListener());
+
+                System.IO.File.AppendAllText(path + PlayerPrefs.GetString("LimesurveyToken") + ".csv", System.IO.File.ReadAllText(backupfile));
+                PlayerPrefs.SetString("CurrentSurvey", "post");
+                SceneManager.LoadScene("_Survey");
+            }
+            else
+            {
+                Application.Quit();
+            }
+        }
+
+        class SavedTracesListener : Net.IRequestListener
+        {
+            public void Result(string data)
+            {
+                Debug.Log("------------------------");
+                Debug.Log(data);
+            }
+
+            public void Error(string error)
+            {
+                Debug.Log("------------------------");
+                Debug.Log(error);
+            }
         }
     }
 }

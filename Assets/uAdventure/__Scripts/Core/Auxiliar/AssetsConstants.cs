@@ -74,6 +74,11 @@
          */
         public const int CATEGORIES_COUNT = 12;
 
+        /**
+         * Extra categories that are not stored are placed ahead of categories count
+         */
+        public const int CATEGORY_BOOL = 13;
+
 
     }
 

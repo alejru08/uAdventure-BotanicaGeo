@@ -117,6 +117,11 @@ namespace uAdventure.Editor
                     },
                     new ColumnList.Column
                     {
+                        Text = "Res.",
+                        SizeOptions = new GUILayoutOption[]{ GUILayout.MaxWidth(25) }
+                    },
+                    new ColumnList.Column
+                    {
                         Text = "Cond.",
                         SizeOptions = new GUILayoutOption[]{ GUILayout.MaxWidth(30) }
                     }
@@ -126,6 +131,13 @@ namespace uAdventure.Editor
                     var line = this.linesList.list[index] as ConversationLineDataControl;
                     BubbleType bubbleType = GetBubbleType(line);
                     var text = line.getText();
+
+                    // Mark the line as selected as soon as any click is performed in the line
+                    if(Event.current.isMouse && Event.current.type == EventType.MouseDown && rect.Contains(Event.current.mousePosition))
+                    {
+                        linesList.index = index;
+                    }
+
                     // Extract the bubble type
                     if (bubbleType.Identifier != "-")
                     {
@@ -177,6 +189,10 @@ namespace uAdventure.Editor
                             }
                             break;
                         case 3: // Conditions
+                            var hasResources = line.isValidAudio() || line.isValidImage();
+                            ResourcesPopup.DoResourcesButton(rect, line, false, hasResources, noBackgroundSkin.button);
+                            break;
+                        case 4: // Conditions
                             var hasConditions = line.getConditions().getBlocksCount() > 0;
                             if (GUI.Button(rect, hasConditions ? conditionsTex : noConditionsTex, noBackgroundSkin.button))
                             {

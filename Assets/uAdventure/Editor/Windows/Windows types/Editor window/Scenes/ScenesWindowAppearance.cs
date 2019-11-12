@@ -11,15 +11,15 @@ namespace uAdventure.Editor
     {
         private SceneDataControl workingScene;
 
-        private readonly AppearanceEditor appearanceEditor;
+        private readonly ResourcesList appearanceEditor;
         private readonly FileChooser background, foreground, music;
 
         public ScenesWindowAppearance(Rect aStartPos, GUIContent aContent, GUIStyle aStyle, SceneEditor sceneEditor, params GUILayoutOption[] aOptions)
             : base(aStartPos, aContent, aStyle, sceneEditor, aOptions)
         {
-            appearanceEditor = ScriptableObject.CreateInstance<AppearanceEditor>();
-            appearanceEditor.height = 160;
-            appearanceEditor.onAppearanceSelected = sceneEditor.RefreshSceneResources;
+            appearanceEditor = ScriptableObject.CreateInstance<ResourcesList>();
+            appearanceEditor.Height = 160;
+            appearanceEditor.onResourceSelected = sceneEditor.RefreshSceneResources;
             PreviewTitle = "Scene.Preview".Traslate();
 
             // Fields
@@ -77,6 +77,15 @@ namespace uAdventure.Editor
             music.DoLayout();
             if (EditorGUI.EndChangeCheck())
                 workingScene.setPreviewMusic(music.Path);
+
+            GUILayout.Space(10);
+
+            EditorGUI.BeginChangeCheck();
+            var newHideInventory = EditorGUILayout.Toggle("Scene.HideInventory".Traslate(), workingScene.HideInventory);
+            if (EditorGUI.EndChangeCheck())
+            {
+                workingScene.HideInventory = newHideInventory;
+            }
         }
     }
 }
