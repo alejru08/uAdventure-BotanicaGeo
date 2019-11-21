@@ -266,14 +266,42 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="no" x="427" y="9" width="133" height="66" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+        <point x="496" y="9" />
+        <point x="560" y="40" />
+        <point x="500" y="75" />
+        <point x="494" y="58" />
+        <point x="428" y="63" />
+        <point x="427" y="27" />
+        <point x="494" y="25" />
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="BackButton" x="493" y="94" scale="0.3707569" layer="1" hasInfluenceArea="no" />
+    </objects>
     <atrezzo>
-      <atrezzo-ref idTarget="animal1" x="208" y="397" scale="0.409518" layer="2" />
-      <atrezzo-ref idTarget="animal2" x="365" y="62" scale="0.1" layer="3" />
-      <atrezzo-ref idTarget="animal3" x="116" y="219" scale="0.04841233" layer="4" />
-      <atrezzo-ref idTarget="animal4" x="152" y="399" scale="0.1" layer="5" />
-      <atrezzo-ref idTarget="animal5" x="356" y="445" scale="0.3940645" layer="6" />
+      <atrezzo-ref idTarget="animal1" x="208" y="397" scale="0.409518" layer="3" />
+      <atrezzo-ref idTarget="animal2" x="365" y="62" scale="0.1" layer="4" />
+      <atrezzo-ref idTarget="animal3" x="116" y="219" scale="0.04841233" layer="5" />
+      <atrezzo-ref idTarget="animal4" x="152" y="399" scale="0.1" layer="6" />
+      <atrezzo-ref idTarget="animal5" x="356" y="445" scale="0.3940645" layer="7" />
       <atrezzo-ref idTarget="enhorabuena" x="286" y="132" scale="0.36" layer="0" />
-      <atrezzo-ref idTarget="tipo" x="490" y="646" scale="0.58" layer="1" />
+      <atrezzo-ref idTarget="tipo" x="490" y="646" scale="0.58" layer="2" />
+    </atrezzo>
+  </scene>
+  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/fondo sat2 creditos .jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <atrezzo>
+      <atrezzo-ref idTarget="Creditos1" x="223" y="271" scale="0.2125082" layer="0" />
     </atrezzo>
   </scene>
   <map-scene id="main" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4009146652323 -3.70070887565678 0.02 0.02" center="(40.4116554382375, -3.69098776580321)" zoom="19" start="no">
@@ -522,6 +550,20 @@
   <atrezzoobject id="enhorabuena">
     <resources name="No name">
       <asset type="image" uri="assets/image/enhorabuena.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Creditos1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/creditos (1).png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
